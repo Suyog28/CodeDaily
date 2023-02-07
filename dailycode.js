@@ -168,17 +168,43 @@ while (i <= 3) {
 
 
 
-var x = 1;
-a();
-b();
-console.log(x);
+// var x = 1;
+// a();
+// b();
+// console.log(x);
 
-function a() {
-  var x = 100;
-  console.log(x);
-}
+// function a() {
+//   var x = 100;
+//   console.log(x);
+// }
 
-function b() {
-  var x = 10;
-  console.log(x);
-}
+// function b() {
+//   var x = 10;
+//   console.log(x);
+// }
+
+const list = [1, 2, 3, 4, 5];
+
+// for (let i = 0; i < list.length; i++) {
+//   console.log(list[i]);
+
+// }
+
+
+list.push(6,7,8,9);
+console.log(list);
+
+list.pop();
+console.log(list);
+
+list.unshift("Abc");
+console.log(list);
+
+list.shift();
+console.log(list)
+
+
+const filter = list.filter((item) => item < 3);
+console.log(filter);
+
+const mapping = list.map()
