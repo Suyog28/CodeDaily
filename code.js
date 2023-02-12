@@ -1131,3 +1131,35 @@ if (matchFound === false) {
 //     alert("It's one of the cleanest cities");
 //   }
 // }
+
+function createRectangle(len, bre) {
+  return rectangle = {
+    length: len,
+    breath: bre,
+    draw: function () {
+      console.log("Draw a circle");
+    }
+  }
+}
+
+const newObject = createRectangle(5, 7);
+newObject.color = "yellow";
+//delete newObject.length;
+// console.log(newObject);
+
+
+const names = {
+  firstName: "Suyog",
+  lastName: "Muley",
+  age: 28
+}
+
+//For in Loop
+for (let name in names) {
+  console.log(name, names[name]);
+}
+
+//For of loop applicable for irrables-Array and Map
+for (let name of Object.values(names)) {
+  console.log(name);
+}
