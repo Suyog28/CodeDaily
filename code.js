@@ -1163,3 +1163,6 @@ for (let name in names) {
 for (let name of Object.values(names)) {
   console.log(name);
 }
+
+// Object clonning- iterating, Assign, Spread
+
