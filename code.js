@@ -1166,3 +1166,24 @@ for (let name of Object.values(names)) {
 
 // Object clonning- iterating, Assign, Spread
 
+//Iterating
+
+let src = {
+  a: 10,
+  b: 20,
+  c: 30
+};
+
+let src1 = { d: 40 }
+//let dst = {};
+// for (let key in src) {
+//   dst[key] = src[key];
+// }
+
+// let dst = Object.assign({}, src, src1); // Assign
+
+//Spread Operator
+
+let dst = { ...src }
+src.a++;
+console.log(dst);
