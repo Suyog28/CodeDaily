@@ -1132,49 +1132,49 @@ if (matchFound === false) {
 //   }
 // }
 
-function createRectangle(len, bre) {
-  return rectangle = {
-    length: len,
-    breath: bre,
-    draw: function () {
-      console.log("Draw a circle");
-    }
-  }
-}
+// function createRectangle(len, bre) {
+//   return rectangle = {
+//     length: len,
+//     breath: bre,
+//     draw: function () {
+//       console.log("Draw a circle");
+//     }
+//   }
+// }
 
-const newObject = createRectangle(5, 7);
-newObject.color = "yellow";
-//delete newObject.length;
-// console.log(newObject);
+// const newObject = createRectangle(5, 7);
+// newObject.color = "yellow";
+// //delete newObject.length;
+// // console.log(newObject);
 
 
-const names = {
-  firstName: "Suyog",
-  lastName: "Muley",
-  age: 28
-}
+// const names = {
+//   firstName: "Suyog",
+//   lastName: "Muley",
+//   age: 28
+// }
 
 //For in Loop
-for (let name in names) {
-  console.log(name, names[name]);
-}
+// for (let name in names) {
+//   console.log(name, names[name]);
+// }
 
-//For of loop applicable for irrables-Array and Map
-for (let name of Object.values(names)) {
-  console.log(name);
-}
+// //For of loop applicable for irrables-Array and Map
+// for (let name of Object.values(names)) {
+//   console.log(name);
+// }
 
 // Object clonning- iterating, Assign, Spread
 
 //Iterating
 
-let src = {
-  a: 10,
-  b: 20,
-  c: 30
-};
+// let src = {
+//   a: 10,
+//   b: 20,
+//   c: 30
+// };
 
-let src1 = { d: 40 }
+// let src1 = { d: 40 }
 //let dst = {};
 // for (let key in src) {
 //   dst[key] = src[key];
@@ -1184,6 +1184,58 @@ let src1 = { d: 40 }
 
 //Spread Operator
 
-let dst = { ...src }
-src.a++;
-console.log(dst);
+// let dst = { ...src }
+// src.a++;
+// console.log(dst);
+
+
+//Array Methods for Values
+
+//adding new element
+
+const fruits = ["Apple", "Mango", "Greps", "Waterlemon"];
+
+fruits.push("12");//adding new element at last
+
+console.log(fruits);
+
+fruits.unshift("Lemon");//add element in beganning
+
+console.log(fruits);
+
+fruits.splice(2, 0, "Coconut", "Annar");//add element in middle
+
+console.log(fruits)
+
+//Searching method of array
+console.log(fruits.indexOf("Mango"));
+console.log(fruits.includes("Mango"));
+console.log(fruits.indexOf("Greps", 3));
+
+
+
+//Reference Object Searching Method
+const courses = [
+  {
+    id: 1, name: "suyog"
+  },
+  {
+    id: 2, name: "Muley"
+  }
+]
+
+
+const result = courses.find((course) => course.name === "Muley")
+console.log(result);
+
+
+//Removing element in array
+
+fruits.pop();//Remove element from last
+console.log(fruits);
+
+fruits.shift();//remove element from begaining
+console.log(fruits);
+
+fruits.splice(2, 2);//remove element from middle
+console.log(fruits)
