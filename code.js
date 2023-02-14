@@ -59,6 +59,8 @@ let ans = num3 >= 50 ? "more than 50" : "it less than 50";
 console.log(ans);
  */
 
+const { join } = require("path");
+
 //else if
 /* 
 let temp = 0;
@@ -1193,49 +1195,105 @@ if (matchFound === false) {
 
 //adding new element
 
-const fruits = ["Apple", "Mango", "Greps", "Waterlemon"];
+// const fruits = ["Apple", "Mango", "Greps", "Waterlemon"];
 
-fruits.push("12");//adding new element at last
+// fruits.push("12");//adding new element at last
 
-console.log(fruits);
+// console.log(fruits);
 
-fruits.unshift("Lemon");//add element in beganning
+// fruits.unshift("Lemon");//add element in beganning
 
-console.log(fruits);
+// console.log(fruits);
 
-fruits.splice(2, 0, "Coconut", "Annar");//add element in middle
+// fruits.splice(2, 0, "Coconut", "Annar");//add element in middle
 
-console.log(fruits)
+// console.log(fruits)
 
 //Searching method of array
-console.log(fruits.indexOf("Mango"));
-console.log(fruits.includes("Mango"));
-console.log(fruits.indexOf("Greps", 3));
+// console.log(fruits.indexOf("Mango"));
+// console.log(fruits.includes("Mango"));
+// console.log(fruits.indexOf("Greps", 3));
 
 
 
 //Reference Object Searching Method
-const courses = [
-  {
-    id: 1, name: "suyog"
-  },
-  {
-    id: 2, name: "Muley"
-  }
-]
+// const courses = [
+//   {
+//     id: 1, name: "suyog"
+//   },
+//   {
+//     id: 2, name: "Muley"
+//   }
+// ]
 
 
-const result = courses.find((course) => course.name === "Muley")
+// const result = courses.find((course) => course.name === "Muley")
+// console.log(result);
+
+
+// //Removing element in array
+
+// fruits.pop();//Remove element from last
+// console.log(fruits);
+
+// fruits.shift();//remove element from begaining
+// console.log(fruits);
+
+// fruits.splice(2, 2);//remove element from middle
+// console.log(fruits)
+
+// //Emptying Array
+
+// // fruits = [];
+// //fruits.length = 0;
+// fruits.splice(0, 4);
+// console.log(fruits);
+
+// //Combining and Slicing of Array
+
+// const numbers = [2, 4, 5, 4, 67];
+// const words = ["a", "b", "e"];
+// const fruits = ["Apple", "Mango", "Greps", "Waterlemon"];
+
+// // let newResult = fruits.concat(numbers, words);
+// let res = fruits.slice(2, 5);
+
+// console.log(res);
+
+//How to combined 2 Object 
+
+let class1 = {
+  std: 1, name: "suyog"
+}
+
+let class2 = {
+  std1: 2, name2: "Chaiali"
+}
+
+let res = Object.assign(class1, class2);
+let result = { ...class1, ...class2 };
+console.log(res)
 console.log(result);
 
+const arr = [3, 5, 6, 7, 4];
 
-//Removing element in array
+//For off Loop
+for (let item of arr) {
+  console.log(item);
+}
 
-fruits.pop();//Remove element from last
-console.log(fruits);
 
-fruits.shift();//remove element from begaining
-console.log(fruits);
+//ForEach Loop
+arr.forEach(element => {
+  console.log(element);
 
-fruits.splice(2, 2);//remove element from middle
-console.log(fruits)
+});
+
+
+const joined = arr.join("/"); //Join Method
+console.log(joined);
+
+const statement = "this is my first msg";
+const spliting = statement.split(" ");//Split method
+console.log(spliting);
+
