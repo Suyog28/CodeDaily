@@ -1297,3 +1297,32 @@ const statement = "this is my first msg";
 const spliting = statement.split(" ");//Split method
 console.log(spliting);
 
+console.log(arr.sort());
+console.log(arr.reverse());
+
+const num = [10, 40, 4, 50];
+
+console.log(num.sort((e) => {
+  return num
+}));
+
+
+function sum() {
+  let total = 0;
+  for (let value of arguments) {
+    total = total + value;
+  }
+  return total;
+}
+
+let resultsum = sum(2, 4, 5);
+
+console.log(resultsum);
+
+//rest operator
+function multiply(...arg) {
+  console.log(arg);
+}
+
+multiply(2, 3);
+
