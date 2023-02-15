@@ -1326,3 +1326,47 @@ function multiply(...arg) {
 
 multiply(2, 3);
 
+//Default Parameter
+function ROI(x, y = 4, z = 3) {
+  return (x * y * z / 100)
+}
+
+console.log(ROI(1000,));
+
+//Getter and Setter concept
+
+const person = {
+  fName: "Suyog",
+  LName: "Muley",
+  get fullName() {
+    return (`${person.fName}${person.LName}`)
+  },
+  set fullName(value) {
+    if (typeof value !== String) {
+      throw new Error("Not a string");
+    }
+    let parts = value.split(" ")
+    this.fName = parts[0];
+    this.LName = parts[1];
+  }
+};
+
+// person.fullName = "Chaitali Muley";
+// console.log(`${person.fName} ${person.LName}`);
+
+
+//Error Handling
+try {
+  person.fullName = "Rahul";
+}
+catch (e) {
+  console.log(e);
+}
+
+
+//Rudese Method
+
+const n = [10, 30, 50, 10];
+
+const ans = n.reduce((a, b) => a + b);
+console.log(ans);
