@@ -60,6 +60,7 @@ console.log(ans);
  */
 
 const { join } = require("path");
+const { number } = require("yargs");
 
 //else if
 /* 
@@ -1262,111 +1263,142 @@ if (matchFound === false) {
 
 //How to combined 2 Object 
 
-let class1 = {
-  std: 1, name: "suyog"
-}
+// let class1 = {
+//   std: 1, name: "suyog"
+// }
 
-let class2 = {
-  std1: 2, name2: "Chaiali"
-}
+// let class2 = {
+//   std1: 2, name2: "Chaiali"
+// }
 
-let res = Object.assign(class1, class2);
-let result = { ...class1, ...class2 };
-console.log(res)
-console.log(result);
+// let res = Object.assign(class1, class2);
+// let result = { ...class1, ...class2 };
+// console.log(res)
+// console.log(result);
 
-const arr = [3, 5, 6, 7, 4];
+// const arr = [3, 5, 6, 7, 4];
 
-//For off Loop
-for (let item of arr) {
-  console.log(item);
-}
-
-
-//ForEach Loop
-arr.forEach(element => {
-  console.log(element);
-
-});
+// //For off Loop
+// for (let item of arr) {
+//   console.log(item);
+// }
 
 
-const joined = arr.join("/"); //Join Method
-console.log(joined);
+// //ForEach Loop
+// arr.forEach(element => {
+//   console.log(element);
 
-const statement = "this is my first msg";
-const spliting = statement.split(" ");//Split method
-console.log(spliting);
+// });
 
-console.log(arr.sort());
-console.log(arr.reverse());
+
+// const joined = arr.join("/"); //Join Method
+// console.log(joined);
+
+// const statement = "this is my first msg";
+// const spliting = statement.split(" ");//Split method
+// console.log(spliting);
+
+// console.log(arr.sort());
+// console.log(arr.reverse());
+
+// const num = [10, 40, 4, 50];
+
+// console.log(num.sort((e) => {
+//   return num
+// }));
+
+
+// function sum() {
+//   let total = 0;
+//   for (let value of arguments) {
+//     total = total + value;
+//   }
+//   return total;
+// }
+
+// let resultsum = sum(2, 4, 5);
+
+// console.log(resultsum);
+
+// //rest operator
+// function multiply(...arg) {
+//   console.log(arg);
+// }
+
+// multiply(2, 3);
+
+// //Default Parameter
+// function ROI(x, y = 4, z = 3) {
+//   return (x * y * z / 100)
+// }
+
+// console.log(ROI(1000,));
+
+// //Getter and Setter concept
+
+// const person = {
+//   fName: "Suyog",
+//   LName: "Muley",
+//   get fullName() {
+//     return (`${person.fName}${person.LName}`)
+//   },
+//   set fullName(value) {
+//     if (typeof value !== String) {
+//       throw new Error("Not a string");
+//     }
+//     let parts = value.split(" ")
+//     this.fName = parts[0];
+//     this.LName = parts[1];
+//   }
+// };
+
+// // person.fullName = "Chaitali Muley";
+// // console.log(`${person.fName} ${person.LName}`);
+
+
+// //Error Handling
+// try {
+//   person.fullName = "Rahul";
+// }
+// catch (e) {
+//   console.log(e);
+// }
+
+
+// //Rudese Method
+
+// const n = [10, 30, 50, 10];
+
+// const ans = n.reduce((a, b) => a + b);
+// console.log(ans);
+
+
+//Map Method
+
+const numbers = [2, 5, 3, 6, 73];
+
+const res = numbers.map((number) => number * 2);
+console.log(res);
+
+const res1 = numbers.map((number) => number * 3);
+console.log(res1);
+
+const res2 = numbers.map((number) => number.toString(2));
+console.log(res2);
+
+
+//Filter Method
+
+const filterRes = numbers.filter((x) => x % 2);
+console.log(filterRes);
+
+const filterRes1 = numbers.filter((x) => x % 2 === 0);
+console.log(filterRes1);
+
+const filterRes2 = numbers.filter((x) => x >= 6);
+console.log(filterRes2);
 
 const num = [10, 40, 4, 50];
 
-console.log(num.sort((e) => {
-  return num
-}));
-
-
-function sum() {
-  let total = 0;
-  for (let value of arguments) {
-    total = total + value;
-  }
-  return total;
-}
-
-let resultsum = sum(2, 4, 5);
-
-console.log(resultsum);
-
-//rest operator
-function multiply(...arg) {
-  console.log(arg);
-}
-
-multiply(2, 3);
-
-//Default Parameter
-function ROI(x, y = 4, z = 3) {
-  return (x * y * z / 100)
-}
-
-console.log(ROI(1000,));
-
-//Getter and Setter concept
-
-const person = {
-  fName: "Suyog",
-  LName: "Muley",
-  get fullName() {
-    return (`${person.fName}${person.LName}`)
-  },
-  set fullName(value) {
-    if (typeof value !== String) {
-      throw new Error("Not a string");
-    }
-    let parts = value.split(" ")
-    this.fName = parts[0];
-    this.LName = parts[1];
-  }
-};
-
-// person.fullName = "Chaitali Muley";
-// console.log(`${person.fName} ${person.LName}`);
-
-
-//Error Handling
-try {
-  person.fullName = "Rahul";
-}
-catch (e) {
-  console.log(e);
-}
-
-
-//Rudese Method
-
-const n = [10, 30, 50, 10];
-
-const ans = n.reduce((a, b) => a + b);
-console.log(ans);
+const r = num.sort((a, b) => a - b);
+console.log(r);
