@@ -1402,3 +1402,50 @@ const num = [10, 40, 4, 50];
 
 const r = num.sort((a, b) => a - b);
 console.log(r);
+
+
+const Employees = [
+  {
+    "userId": "rirani",
+    "jobTitleName": "Developer",
+    "firstName": "Romin",
+    "lastName": "Irani",
+    "preferredFullName": "Romin Irani",
+    "employeeCode": "E1",
+    "region": "CA",
+    "phoneNumber": "408-1234567",
+    "emailAddress": "romin.k.irani@gmail.com"
+  },
+  {
+    "userId": "nirani",
+    "jobTitleName": "Developer",
+    "firstName": "Neil",
+    "lastName": "Irani",
+    "preferredFullName": "Neil Irani",
+    "employeeCode": "E2",
+    "region": "CA",
+    "phoneNumber": "408-1111111",
+    "emailAddress": "neilrirani@gmail.com"
+  },
+  {
+    "userId": "thanks",
+    "jobTitleName": "Program Directory",
+    "firstName": "Tom",
+    "lastName": "Hanks",
+    "preferredFullName": "Tom Hanks",
+    "employeeCode": "E3",
+    "region": "CA",
+    "phoneNumber": "408-2222222",
+    "emailAddress": "tomhanks@gmail.com"
+  }
+]
+
+const empRes = Employees.filter((x) => x.jobTitleName === "Developer");
+
+console.log(empRes);
+
+const empRes1 = Employees.map((x) => x.firstName + " " + x.lastName);
+console.log(empRes1);
+
+const empRes2 = Employees.reduce((pre, curr) => pre.toString() + curr.toString());//Example not valid
+console.log(empRes2);
