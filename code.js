@@ -1449,3 +1449,5 @@ console.log(empRes1);
 
 const empRes2 = Employees.reduce((pre, curr) => pre.toString() + curr.toString());//Example not valid
 console.log(empRes2);
+
+//DOM manupulation Practice
