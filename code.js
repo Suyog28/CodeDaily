@@ -1450,4 +1450,9 @@ console.log(empRes1);
 const empRes2 = Employees.reduce((pre, curr) => pre.toString() + curr.toString());//Example not valid
 console.log(empRes2);
 
+let age = 34 ;
+const result1 = age >= 18 ? "You are eligible for Vote" : "Not valid";
+
+console.log(result1);
+
 //DOM manupulation Practice
