@@ -59,8 +59,9 @@ let ans = num3 >= 50 ? "more than 50" : "it less than 50";
 console.log(ans);
  */
 
-const { join } = require("path");
-const { number } = require("yargs");
+
+
+
 
 //else if
 /* 
@@ -1530,12 +1531,38 @@ if (matchFound === false) {
 // } while (number != secretNumber);
 
 
-let products = [
-  { name: 'iPhone', price: 900 },
-  { name: 'Samsung Galaxy', price: 850 },
-  { name: 'Sony Xperia', price: 700 },
-];
+// let products = [
+//   { name: 'iPhone', price: 900 },
+//   { name: 'Samsung Galaxy', price: 850 },
+//   { name: 'Sony Xperia', price: 700 },
+// ];
 
-products.sort((a, b) => a.price > b.price ? 1 : b.price > a.price ? -1 : 0);
+// products.sort((a, b) => a.price > b.price ? 1 : b.price > a.price ? -1 : 0);
 
-console.table(products);
+// console.table(products);
+
+// (function () {
+//   console.log("JS LIFE")
+// })();
+
+// console.time("answer time");
+
+// document.addEventListener("click", function () {
+//   console.log("Clicked");
+// })
+
+
+const element = document.querySelector("#new");
+element.addEventListener("click", function (event) {
+  console.log("Click on element" + event.target.textContent);
+})
+
+const newElement = document.createElement("h1");
+newElement.innerText = "New Element Created";
+element.appendChild(newElement);
+
+newElement.addEventListener("click", function () {
+  newElement.style.color = "red";
+  newElement.style.fontSize = "50px";
+})
+
