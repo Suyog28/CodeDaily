@@ -1375,91 +1375,156 @@ if (matchFound === false) {
 
 //Map Method
 
-const numbers = [2, 5, 3, 6, 73];
+// const numbers = [2, 5, 3, 6, 73];
 
-const res = numbers.map((number) => number * 2);
-console.log(res);
+// const res = numbers.map((number) => number * 2);
+// console.log(res);
 
-const res1 = numbers.map((number) => number * 3);
-console.log(res1);
+// const res1 = numbers.map((number) => number * 3);
+// console.log(res1);
 
-const res2 = numbers.map((number) => number.toString(2));
-console.log(res2);
-
-
-//Filter Method
-
-const filterRes = numbers.filter((x) => x % 2);
-console.log(filterRes);
-
-const filterRes1 = numbers.filter((x) => x % 2 === 0);
-console.log(filterRes1);
-
-const filterRes2 = numbers.filter((x) => x >= 6);
-console.log(filterRes2);
-
-const num = [10, 40, 4, 50];
-
-const r = num.sort((a, b) => a - b);
-console.log(r);
+// const res2 = numbers.map((number) => number.toString(2));
+// console.log(res2);
 
 
-const Employees = [
-  {
-    "userId": "rirani",
-    "jobTitleName": "Developer",
-    "firstName": "Romin",
-    "lastName": "Irani",
-    "preferredFullName": "Romin Irani",
-    "employeeCode": "E1",
-    "region": "CA",
-    "phoneNumber": "408-1234567",
-    "emailAddress": "romin.k.irani@gmail.com"
-  },
-  {
-    "userId": "nirani",
-    "jobTitleName": "Developer",
-    "firstName": "Neil",
-    "lastName": "Irani",
-    "preferredFullName": "Neil Irani",
-    "employeeCode": "E2",
-    "region": "CA",
-    "phoneNumber": "408-1111111",
-    "emailAddress": "neilrirani@gmail.com"
-  },
-  {
-    "userId": "thanks",
-    "jobTitleName": "Program Directory",
-    "firstName": "Tom",
-    "lastName": "Hanks",
-    "preferredFullName": "Tom Hanks",
-    "employeeCode": "E3",
-    "region": "CA",
-    "phoneNumber": "408-2222222",
-    "emailAddress": "tomhanks@gmail.com"
+// //Filter Method
+
+// const filterRes = numbers.filter((x) => x % 2);
+// console.log(filterRes);
+
+// const filterRes1 = numbers.filter((x) => x % 2 === 0);
+// console.log(filterRes1);
+
+// const filterRes2 = numbers.filter((x) => x >= 6);
+// console.log(filterRes2);
+
+// const num = [10, 40, 4, 50];
+
+// const r = num.sort((a, b) => a - b);
+// console.log(r);
+
+
+// const Employees = [
+//   {
+//     "userId": "rirani",
+//     "jobTitleName": "Developer",
+//     "firstName": "Romin",
+//     "lastName": "Irani",
+//     "preferredFullName": "Romin Irani",
+//     "employeeCode": "E1",
+//     "region": "CA",
+//     "phoneNumber": "408-1234567",
+//     "emailAddress": "romin.k.irani@gmail.com"
+//   },
+//   {
+//     "userId": "nirani",
+//     "jobTitleName": "Developer",
+//     "firstName": "Neil",
+//     "lastName": "Irani",
+//     "preferredFullName": "Neil Irani",
+//     "employeeCode": "E2",
+//     "region": "CA",
+//     "phoneNumber": "408-1111111",
+//     "emailAddress": "neilrirani@gmail.com"
+//   },
+//   {
+//     "userId": "thanks",
+//     "jobTitleName": "Program Directory",
+//     "firstName": "Tom",
+//     "lastName": "Hanks",
+//     "preferredFullName": "Tom Hanks",
+//     "employeeCode": "E3",
+//     "region": "CA",
+//     "phoneNumber": "408-2222222",
+//     "emailAddress": "tomhanks@gmail.com"
+//   }
+// ]
+
+// const empRes = Employees.filter((x) => x.jobTitleName === "Developer");
+
+// console.log(empRes);
+
+// const empRes1 = Employees.map((x) => x.firstName + " " + x.lastName);
+// console.log(empRes1);
+
+// const empRes2 = Employees.reduce((pre, curr) => pre.toString() + curr.toString());//Example not valid
+// console.log(empRes2);
+
+
+// //Ternary Operator
+// // let age = 34 ;
+// // const result1 = age >= 18 ? "You are eligible for Vote" : "Not valid";
+// // console.log(result1);
+
+// let speed = 80;
+
+// let limitCheck = speed >= 120 ? "Too Fast" : speed >= 90 ? "Fast" : " Ok!";
+
+// console.log(limitCheck);
+
+// //Spread Operator
+
+// let rgb = ['red', 'green', 'blue'];
+// let cmyk = ['cyan', 'magenta', 'yellow', 'black'];
+
+// let joinArray = [...cmyk, ...Employees, ...rgb];
+
+// console.log(joinArray);
+
+// const color = {
+//   radius: 10
+// }
+
+// // //Spread Operator
+// const radiusColor = {
+//   ...color,
+//   color: "blue"
+// }
+
+// // console.log(radiusColor);
+
+// //clone an object
+
+// const cloneObject = { ...radiusColor };
+// console.log(cloneObject);
+
+// let count = 1;
+// while (count <= 10) {
+//   // console.log(count);
+//   count++;
+// }
+
+// do {
+//   console.log(count);
+//   count = count + 2;
+// } while (count <= 10);
+
+//Secret Number Game
+// generate a secret number between 1 and 10
+const MIN = 1;
+const MAX = 10;
+
+let secretNumber = Math.floor(Math.random() * (MAX - MIN + 1)) + MIN;
+
+let guesses = 0; // for storing the number of guesses
+let hint = ''; // for storing hint
+let number = 0;
+do {
+  // get input from user
+  let input = prompt(`Please enter a number between ${MIN} and ${MAX}` + hint);
+
+  // get the integer
+  number = parseInt(input);
+
+  // increase the number of guesses
+  guesses++;
+
+  // check input number with the secret number provide hint if needed
+  if (number > secretNumber) {
+    hint = ', and less than ' + number;
+  } else if (number < secretNumber) {
+    hint = ', and greater than ' + number;
+  } else if (number == secretNumber) {
+    alert(`Bravo! you're correct after ${guesses} guess(es).`);
   }
-]
-
-const empRes = Employees.filter((x) => x.jobTitleName === "Developer");
-
-console.log(empRes);
-
-const empRes1 = Employees.map((x) => x.firstName + " " + x.lastName);
-console.log(empRes1);
-
-const empRes2 = Employees.reduce((pre, curr) => pre.toString() + curr.toString());//Example not valid
-console.log(empRes2);
-
-
-//Ternary Operator
-// let age = 34 ;
-// const result1 = age >= 18 ? "You are eligible for Vote" : "Not valid";
-// console.log(result1);
-
-let speed =80;
-
-let limitCheck = speed >= 120 ? "Too Fast" : speed >= 90 ? "Fast" : " Ok!";
-
-console.log(limitCheck);
-
-//DOM manupulation Practice
+} while (number != secretNumber);
