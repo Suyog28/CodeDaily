@@ -1450,9 +1450,16 @@ console.log(empRes1);
 const empRes2 = Employees.reduce((pre, curr) => pre.toString() + curr.toString());//Example not valid
 console.log(empRes2);
 
-let age = 34 ;
-const result1 = age >= 18 ? "You are eligible for Vote" : "Not valid";
 
-console.log(result1);
+//Ternary Operator
+// let age = 34 ;
+// const result1 = age >= 18 ? "You are eligible for Vote" : "Not valid";
+// console.log(result1);
+
+let speed =80;
+
+let limitCheck = speed >= 120 ? "Too Fast" : speed >= 90 ? "Fast" : " Ok!";
+
+console.log(limitCheck);
 
 //DOM manupulation Practice
