@@ -1594,7 +1594,9 @@ console.log(person2);
 // console.log(window === this);
 
 let widget = {
-  color: 'red'
+  color: 'red',
+  height: 10,
+  width: 20
 };
 
 let style = {
@@ -1605,3 +1607,20 @@ let style = {
 let clonedWidget = Object.assign({}, widget, style);
 
 console.log(clonedWidget);
+
+//Factory Function
+
+function createPerson(firstName, lastName) {
+  return {
+    firstName: firstName,
+    lastName: lastName,
+    getFullName() {
+      return firstName + ' ' + lastName;
+    }
+  }
+}
+
+const person3 = createPerson("Suyog", "Muley");
+const person4 = createPerson("Chaitali", "Muley");
+
+console.log(person3, person4, person3.getFullName());
