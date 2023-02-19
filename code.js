@@ -1552,17 +1552,56 @@ if (matchFound === false) {
 // })
 
 
-const element = document.querySelector("#new");
-element.addEventListener("click", function (event) {
-  console.log("Click on element" + event.target.textContent);
-})
+// const element = document.querySelector("#new");
+// element.addEventListener("click", function (event) {
+//   console.log("Click on element" + event.target.textContent);
+// })
 
-const newElement = document.createElement("h1");
-newElement.innerText = "New Element Created";
-element.appendChild(newElement);
+// const newElement = document.createElement("h1");
+// newElement.innerText = "New Element Created";
+// element.appendChild(newElement);
 
-newElement.addEventListener("click", function () {
-  newElement.style.color = "red";
-  newElement.style.fontSize = "50px";
-})
+// newElement.addEventListener("click", function () {
+//   newElement.style.color = "red";
+//   newElement.style.fontSize = "50px";
+// })
 
+let person = {
+  name: "John Doe",
+  greet: function () {
+    return "Hi, I'm " + this.name;
+  }
+};
+console.log(person);
+console.log(person.toString());
+console.log(person.__proto__);
+
+
+let counter = {
+  count: 0,
+  next: function () {
+    return ++this.count;
+  }
+}
+
+const person1 = Object.values(person);
+//console.log(person1);
+const person2 = Object.entries(person);
+console.log(person2);
+
+// console.log(counter.next());
+
+// console.log(window === this);
+
+let widget = {
+  color: 'red'
+};
+
+let style = {
+  color: 'Red',
+  borderStyle: 'solid'
+};
+
+let clonedWidget = Object.assign({}, widget, style);
+
+console.log(clonedWidget);
