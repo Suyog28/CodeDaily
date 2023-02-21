@@ -38,7 +38,7 @@ console.log(string1 + " " + string2);
 let strn1 = "22";
 let strn2 = 22;
 
- console.log(+strn1 + +strn2); 
+ console.log(+strn1 + +strn2);
 
 console.log(strn1 == strn2);
 
@@ -64,7 +64,7 @@ console.log(ans);
 
 
 //else if
-/* 
+/*
 let temp = 0;
 
 if (temp == 0) {
@@ -78,7 +78,7 @@ if (temp == 0) {
 } */
 
 //Switch Statement
-/* 
+/*
 let temp = 0;
 
 switch (temp) {
@@ -433,7 +433,7 @@ console.log(isEvenNumber(14));
 // };
 
 //Param Destructing
-/* 
+/*
 const person = {
   firstName: "Suyog",
   lastName: "Muley",
@@ -474,7 +474,7 @@ myName();
 //Important array methods
 
 //const numbers = [2, 4, 5, 10, 23];
-/* 
+/*
 function multiplytwo(number, index) {
   return `Index of ${index} is multiplied by 2 is ${number}*2`;
 }
@@ -509,7 +509,7 @@ for (let user of student) {
  */
 
 //Map methods
-/* 
+/*
 const num = [3, 5, 6, 7, 100];
 
 const square = function (number) {
@@ -518,7 +518,7 @@ const square = function (number) {
 
 console.log(num.map(square)); //It will always return new array
  */
-/* 
+/*
 const student = [
   { firstName: "Suyog", age: 24 },
   { firstName: "Chaitali", age: 24 },
@@ -610,7 +610,7 @@ const users = [
 const userFind = users.find((user) => user.userId === 1);
 
 console.log(userFind); */
-/* 
+/*
 //Every Method
 
 const numbers = [2, 4, 6, 8, 10, 3];
@@ -628,7 +628,7 @@ console.log(ans); */
 for (let char of firstName) {
   console.log(char);
 } */
-/* 
+/*
 //Set iterables
 
 const numbers = new Set([1, 2, 3, 4]);
@@ -895,7 +895,7 @@ const user3 = createUser("Muley", 39, "suyog@gmail.com", "MyAddres");
 console.log(user1); */
 
 // console.log(createUser.prototype);
-/* 
+/*
 createUser.prototype.about = function () {
   return `${this.firstName}, ${this.age}`;
 };
@@ -965,7 +965,7 @@ const user3 = new CreateUser("Muley", 39, "suyog@gmail.com", "MyAddres");
 
 console.log(user1.about());
  */
-/* 
+/*
 class Animal {
   constructor(name, age, sound) {
     this.name = name;
@@ -1566,61 +1566,79 @@ if (matchFound === false) {
 //   newElement.style.fontSize = "50px";
 // })
 
-let person = {
-  name: "John Doe",
-  greet: function () {
-    return "Hi, I'm " + this.name;
-  }
-};
-console.log(person);
-console.log(person.toString());
-console.log(person.__proto__);
+// let person = {
+//   name: "John Doe",
+//   greet: function () {
+//     return "Hi, I'm " + this.name;
+//   }
+// };
+// console.log(person);
+// console.log(person.toString());
+// console.log(person.__proto__);
 
 
-let counter = {
-  count: 0,
-  next: function () {
-    return ++this.count;
-  }
+// let counter = {
+//   count: 0,
+//   next: function () {
+//     return ++this.count;
+//   }
+// }
+
+// const person1 = Object.values(person);
+// //console.log(person1);
+// const person2 = Object.entries(person);
+// console.log(person2);
+
+// // console.log(counter.next());
+
+// // console.log(window === this);
+
+// let widget = {
+//   color: 'red',
+//   height: 10,
+//   width: 20
+// };
+
+// let style = {
+//   color: 'Red',
+//   borderStyle: 'solid'
+// };
+
+// let clonedWidget = Object.assign({}, widget, style);
+
+// console.log(clonedWidget);
+
+// //Factory Function
+
+// function createPerson(firstName, lastName) {
+//   return {
+//     firstName: firstName,
+//     lastName: lastName,
+//     getFullName() {
+//       return firstName + ' ' + lastName;
+//     }
+//   }
+// }
+
+// const person3 = createPerson("Suyog", "Muley");
+// const person4 = createPerson("Chaitali", "Muley");
+
+// console.log(person3, person4, person3.getFullName());
+const t1 = performance.now();
+let mydiv = document.createElement('div');
+for (let i = 0; i <= 100; i++) {
+  let element = document.createElement('p');
+  element.textContent = "This is new div elements" + i;
+  mydiv.appendChild(element);
 }
-
-const person1 = Object.values(person);
-//console.log(person1);
-const person2 = Object.entries(person);
-console.log(person2);
-
-// console.log(counter.next());
-
-// console.log(window === this);
-
-let widget = {
-  color: 'red',
-  height: 10,
-  width: 20
-};
-
-let style = {
-  color: 'Red',
-  borderStyle: 'solid'
-};
-
-let clonedWidget = Object.assign({}, widget, style);
-
-console.log(clonedWidget);
-
-//Factory Function
-
-function createPerson(firstName, lastName) {
-  return {
-    firstName: firstName,
-    lastName: lastName,
-    getFullName() {
-      return firstName + ' ' + lastName;
-    }
-  }
+document.body.appendChild(mydiv);
+const t2 = performance.now();
+console.log(t2 - t1);
+const t3 = performance.now();
+for (let i = 0; i <= 100; i++) {
+  let newElement = document.createElement('p');
+  newElement.textContent = "Second Para" + i;
+  document.body.appendChild(newElement);
 }
-
-const person3 = createPerson("Suyog", "Muley");
-const person4 = createPerson("Chaitali", "Muley");
-
-console.log(person3, person4, person3.getFullName());
+const t4 = performance.now();
+console.log(t4 - t3);
