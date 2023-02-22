@@ -1655,13 +1655,17 @@ const students = [{
 }, {
   name: "Stud 3",
   score: 90
+},
+{
+  name: "Stud 4",
+  score: 80
 }]
 
-if (students.some(score => { return score.score > 90 })) {
-  console.log("Having Excellance Marks");
-} else {
-  console.log("Average Marks");
-}
+// if (students.some(score => { return score.score > 90 })) {
+//   console.log("Having Excellance Marks");
+// } else {
+//   console.log("Average Marks");
+// }
 
 // if (students.some(student => {
 //   return student.score > 90
@@ -1670,3 +1674,17 @@ if (students.some(score => { return score.score > 90 })) {
 // } else {
 //   console.log("Unfortunately, nothing is exceptional")
 // }
+
+//Every Student pass mark above 70% with Every Array methods
+
+// if (students.every(student => student.score > 70)) {
+//   console.log("All Student pass");
+// } else {
+//   console.log("Some students fails");
+// }
+
+
+//Include Method
+const marks = [20, 49, 50, 20, 505];
+const studentRes = marks.includes(50);
+console.log(studentRes);
