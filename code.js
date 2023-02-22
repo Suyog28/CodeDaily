@@ -1624,21 +1624,49 @@ if (matchFound === false) {
 // const person4 = createPerson("Chaitali", "Muley");
 
 // console.log(person3, person4, person3.getFullName());
-const t1 = performance.now();
-let mydiv = document.createElement('div');
-for (let i = 0; i <= 100; i++) {
-  let element = document.createElement('p');
-  element.textContent = "This is new div elements" + i;
-  mydiv.appendChild(element);
+// const t1 = performance.now();
+// let mydiv = document.createElement('div');
+// for (let i = 0; i <= 100; i++) {
+//   let element = document.createElement('p');
+//   element.textContent = "This is new div elements" + i;
+//   mydiv.appendChild(element);
+// }
+// document.body.appendChild(mydiv);
+// const t2 = performance.now();
+// console.log(t2 - t1);
+// const t3 = performance.now();
+// for (let i = 0; i <= 100; i++) {
+//   let newElement = document.createElement('p');
+//   newElement.textContent = "Second Para" + i;
+//   document.body.appendChild(newElement);
+// }
+// const t4 = performance.now();
+// console.log(t4 - t3);
+
+
+//Some Array Method
+
+const students = [{
+  name: "Stud 1",
+  score: 78,
+}, {
+  name: "Stud 2",
+  score: 92
+}, {
+  name: "Stud 3",
+  score: 90
+}]
+
+if (students.some(score => { return score.score > 90 })) {
+  console.log("Having Excellance Marks");
+} else {
+  console.log("Average Marks");
 }
-document.body.appendChild(mydiv);
-const t2 = performance.now();
-console.log(t2 - t1);
-const t3 = performance.now();
-for (let i = 0; i <= 100; i++) {
-  let newElement = document.createElement('p');
-  newElement.textContent = "Second Para" + i;
-  document.body.appendChild(newElement);
-}
-const t4 = performance.now();
-console.log(t4 - t3);
+
+// if (students.some(student => {
+//   return student.score > 90
+// })) {
+//   console.log("There are students with exceptional score!")
+// } else {
+//   console.log("Unfortunately, nothing is exceptional")
+// }
