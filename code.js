@@ -1691,10 +1691,34 @@ const students = [{
 
 
 
-async function getData() {
-  const content = await fetch("https://catfact.ninja/fact");
-  const output = await content.json();
-  console.log(output);
+// async function getData() {
+//   const content = await fetch("https://catfact.ninja/fact");
+//   const output = await content.json();
+//   console.log(output);
 
+// }
+// getData();
+
+
+async function utility() {
+
+  let output = new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve("Output one");
+    }, 2000);
+  });
+
+  let newMosem = new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve("new Mosem");
+    }, 3000)
+  })
+
+  let res = await output;
+  let res1 = await newMosem;
+
+  console.log(res);
+  console.log(res1);
 }
-getData();
+
+utility();
