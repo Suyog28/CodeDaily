@@ -1685,6 +1685,16 @@ const students = [{
 
 
 //Include Method
-const marks = [20, 49, 50, 20, 505];
-const studentRes = marks.includes(50);
-console.log(studentRes);
+// const marks = [20, 49, 50, 20, 505];
+// const studentRes = marks.includes(50);
+// console.log(studentRes);
+
+
+
+async function getData() {
+  const content = await fetch("https://catfact.ninja/fact");
+  const output = await content.json();
+  console.log(output);
+
+}
+getData();
