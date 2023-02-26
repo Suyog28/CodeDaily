@@ -1722,3 +1722,30 @@ async function utility() {
 }
 
 utility();
+
+
+let person = {
+  firstName: "Suyog",
+  lastName: "Muley",
+  middleName: "C.",
+  currentAge: 28
+}
+
+let { firstName, lastName, middleName = '', currentAge: age = 29 } = person;
+
+console.log(firstName);
+console.log(age);
+
+class Person {
+  constructor(name) {
+    this.name = name;
+  }
+  getName() {
+    return this.name;
+  }
+}
+
+let john = new Person("john");
+
+console.log(john);
+console.log(john.getName())
