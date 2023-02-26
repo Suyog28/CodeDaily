@@ -1646,20 +1646,20 @@ if (matchFound === false) {
 
 //Some Array Method
 
-const students = [{
-  name: "Stud 1",
-  score: 78,
-}, {
-  name: "Stud 2",
-  score: 92
-}, {
-  name: "Stud 3",
-  score: 90
-},
-{
-  name: "Stud 4",
-  score: 80
-}]
+// const students = [{
+//   name: "Stud 1",
+//   score: 78,
+// }, {
+//   name: "Stud 2",
+//   score: 92
+// }, {
+//   name: "Stud 3",
+//   score: 90
+// },
+// {
+//   name: "Stud 4",
+//   score: 80
+// }]
 
 // if (students.some(score => { return score.score > 90 })) {
 //   console.log("Having Excellance Marks");
@@ -1700,52 +1700,135 @@ const students = [{
 // getData();
 
 
-async function utility() {
+// async function utility() {
 
-  let output = new Promise((resolve, reject) => {
-    setTimeout(() => {
-      resolve("Output one");
-    }, 2000);
-  });
+//   let output = new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       resolve("Output one");
+//     }, 2000);
+//   });
 
-  let newMosem = new Promise((resolve, reject) => {
-    setTimeout(() => {
-      resolve("new Mosem");
-    }, 3000)
-  })
+//   let newMosem = new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       resolve("new Mosem");
+//     }, 3000)
+//   })
 
-  let res = await output;
-  let res1 = await newMosem;
+//   let res = await output;
+//   let res1 = await newMosem;
 
-  console.log(res);
-  console.log(res1);
-}
+//   console.log(res);
+//   console.log(res1);
+// }
 
-utility();
+// utility();
 
 
-let person = {
-  firstName: "Suyog",
-  lastName: "Muley",
-  middleName: "C.",
-  currentAge: 28
-}
+// let person = {
+//   firstName: "Suyog",
+//   lastName: "Muley",
+//   middleName: "C.",
+//   currentAge: 28
+// }
 
-let { firstName, lastName, middleName = '', currentAge: age = 29 } = person;
+// let { firstName, lastName, middleName = '', currentAge: age = 29 } = person;
 
-console.log(firstName);
-console.log(age);
+// console.log(firstName);
+// console.log(age);
+
+// class Person {
+//   constructor(name) {
+//     this.name = name;
+//   }
+//   getName() {
+//     return this.name;
+//   }
+// }
+
+// let john = new Person("john");
+
+// console.log(john);
+// console.log(john.getName())
+
+// let app = new class {
+//   constructor(name) {
+//     this.name = name;
+//   }
+//   start() {
+//     console.log(`Starting the ${this.name}...`);
+//   }
+// }('Awesome App')
+
+// console.log(app.start());
+
+
+
+//Inheritance in classes with Extends keyword
+
+// class Animal {
+//   constructor(legs) {
+//     this.legs = legs;
+//   }
+
+//   walk() {
+//     console.log("Bird walking on " + this.legs);
+//   }
+// }
+
+
+// class Bird extends Animal {
+//   constructor(legs) {
+//     super(legs);
+//   }
+//   fly() {
+//     console.log("Bird is flying in air");
+//   }
+// }
+
+// let coco = new Bird(4);
+// coco.fly();
+
+// coco.walk();
+
+// //Constructor Function with new.Target
+
+// function Person(name) {
+//   if (!new.target) {
+//     throw ("Use new key word to access");
+//   }
+//   this.name = name;
+// }
+
+// let person = new Person("Suyog");
+// console.log(person.name);
+
+// Person("Suyog");
+
+// console.log(window.name);
+
 
 class Person {
   constructor(name) {
     this.name = name;
-  }
-  getName() {
-    return this.name;
+    console.log(new.target.name);
   }
 }
 
-let john = new Person("john");
+class Employee extends Person {
+  constructor(name, title) {
+    super(name);
+    this.title = title;
+  }
+}
 
-console.log(john);
-console.log(john.getName())
+let john = new Person('John Doe'); // Person
+let lily = new Employee('Lily Bush', 'Programmer'); // Employee
+
+
+function add(x, y) {
+  return x + y;
+}
+
+console.log(add(3, 5));
+console.log(add.length);
+console.log(add.prototype);
