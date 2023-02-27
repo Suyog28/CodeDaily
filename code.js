@@ -1832,3 +1832,18 @@ function add(x, y) {
 console.log(add(3, 5));
 console.log(add.length);
 console.log(add.prototype);
+
+let cat = { type: "cat", sound: "Mouw" };
+let dog = { type: "dog", sound: "bhavvvv" };
+
+let says = function (message) {
+  console.log(message);
+  console.log(this.type + " Says " + this.sound);
+}
+
+says.apply(cat, ["What does cat says?"])//Apply Method pass array like object
+says.apply(dog, ['what does cat says?'])
+
+//call method pass a argument 
+says.call(cat, 'What does cat says?');
+says.call(dog, 'what does dog says?');
