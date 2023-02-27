@@ -1958,15 +1958,42 @@ if (matchFound === false) {
 
 //IIFE-Immediatly Invoked function experession
 
-(function () {
+// (function () {
 
-})();//Syntax
+// })();//Syntax
 
-let addition = (function (a, b) {
-  return a + b;
-})(10, 50);
+// let addition = (function (a, b) {
+//   return a + b;
+// })(10, 50);
 
-let add = ((a, b) => a + b)(10, 30);//With Arrow Function
+// let add = ((a, b) => a + b)(10, 30);//With Arrow Function
 
-console.log(add);
-console.log(addition);
+// console.log(add);
+// console.log(addition);
+
+// //Multuple value return from function
+
+// function greetings() {
+//   let firstname = "Suyog",
+//     wifename = "Chaitali";
+
+//   return [firstname, wifename];
+// }
+// let greet = greetings();
+// console.log(greet);
+
+
+//Should Not use arrow function with Event Listeners
+
+const greeting = document.querySelector('#greeting');
+console.log(greeting);
+const username = document.querySelector('#username');
+console.log(username);
+
+username.addEventListener('keyup', function () {
+  greeting.textContent = 'hi ' + this.value;
+});
+
+
+
+
