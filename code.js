@@ -1807,119 +1807,166 @@ if (matchFound === false) {
 // console.log(window.name);
 
 
-class Person {
-  constructor(name) {
-    this.name = name;
-    console.log(new.target.name);
-  }
-}
+// class Person {
+//   constructor(name) {
+//     this.name = name;
+//     console.log(new.target.name);
+//   }
+// }
 
-class Employee extends Person {
-  constructor(name, title) {
-    super(name);
-    this.title = title;
-  }
-}
+// class Employee extends Person {
+//   constructor(name, title) {
+//     super(name);
+//     this.title = title;
+//   }
+// }
 
-let john = new Person('John Doe'); // Person
-let lily = new Employee('Lily Bush', 'Programmer'); // Employee
-
-
-function add(x, y) {
-  return x + y;
-}
-
-console.log(add(3, 5));
-console.log(add.length);
-console.log(add.prototype);
-
-let cat = { type: "cat", sound: "Mouw" };
-let dog = { type: "dog", sound: "bhavvvv" };
-
-let says = function (message) {
-  console.log(message);
-  console.log(this.type + " Says " + this.sound);
-}
-
-says.apply(cat, ["What does cat says?"])//Apply Method pass array like object
-says.apply(dog, ['what does cat says?'])
-
-//call method pass a argument 
-says.call(cat, 'What does cat says?');
-says.call(dog, 'what does dog says?');
+// let john = new Person('John Doe'); // Person
+// let lily = new Employee('Lily Bush', 'Programmer'); // Employee
 
 
-//Call(), Apply() and Bind()---
+// function add(x, y) {
+//   return x + y;
+// }
 
-//----bind() methods
+// console.log(add(3, 5));
+// console.log(add.length);
+// console.log(add.prototype);
 
-let car = {
-  speed: 10,
-  start: function () {
-    console.log("Start with " + this.speed + " km/h");
-  }
-}
+// let cat = { type: "cat", sound: "Mouw" };
+// let dog = { type: "dog", sound: "bhavvvv" };
 
-let aircraft = {
-  speed: 20,
-  fly: function () {
-    console.log("Aircraft Flying");
-  }
-}
+// let says = function (message) {
+//   console.log(message);
+//   console.log(this.type + " Says " + this.sound);
+// }
 
+// says.apply(cat, ["What does cat says?"])//Apply Method pass array like object
+// says.apply(dog, ['what does cat says?'])
 
-
-
-
-const AirCraftstart = car.start.bind(aircraft);//bind method called(Brarrow the start method from car obj)
-AirCraftstart();
-
-car.start.call(aircraft);//Call method call immediatly 
+// //call method pass a argument 
+// says.call(cat, 'What does cat says?');
+// says.call(dog, 'what does dog says?');
 
 
-//Effective use of Call method
-//Find a odd number in array
+// //Call(), Apply() and Bind()---
 
-function isOdd(num) {
-  return num % 2;
-}
+// //----bind() methods
 
-function isEven(num) {
-  return num % 2 === 0;
-}
-function getOddNumbers() {
-  return Array.prototype.filter.call(arguments, isOdd);
-}
+// let car = {
+//   speed: 10,
+//   start: function () {
+//     console.log("Start with " + this.speed + " km/h");
+//   }
+// }
 
-function getEvenNumbers() {
-  return Array.prototype.filter.call(arguments, isEven);
-}
-
-let oddnumbers = getOddNumbers(10, 4, 2, 5, 7, 4, 1, 23);
-
-let evennumbers = getEvenNumbers(10, 4, 2, 5, 7, 4, 1, 23);
-console.log("Oddnumbers " + oddnumbers);
-console.log("Even Numbers " + evennumbers)
-
-
-//How to find prime numbers in given array
-
-let isPrime = [3, 5, 73, 29, 4, 6, 9, 10, 21, 9808];
-
-let result = isPrime.filter((num) => {
-  for (let i = 2; i <= Math.sqrt(num); i++) {
-    if (num % i === 0) {
-      return false;
-    } else {
-      return true;
-    }
-  }
-})
-
-console.log(result);
+// let aircraft = {
+//   speed: 20,
+//   fly: function () {
+//     console.log("Aircraft Flying");
+//   }
+// }
 
 
 
 
 
+// const AirCraftstart = car.start.bind(aircraft);//bind method called(Brarrow the start method from car obj)
+// AirCraftstart();
 
+// car.start.call(aircraft);//Call method call immediatly 
+
+
+// //Effective use of Call method
+// //Find a odd number in array
+
+// function isOdd(num) {
+//   return num % 2;
+// }
+
+// function isEven(num) {
+//   return num % 2 === 0;
+// }
+// function getOddNumbers() {
+//   return Array.prototype.filter.call(arguments, isOdd);
+// }
+
+// function getEvenNumbers() {
+//   return Array.prototype.filter.call(arguments, isEven);
+// }
+
+// let oddnumbers = getOddNumbers(10, 4, 2, 5, 7, 4, 1, 23);
+
+// let evennumbers = getEvenNumbers(10, 4, 2, 5, 7, 4, 1, 23);
+// console.log("Oddnumbers " + oddnumbers);
+// console.log("Even Numbers " + evennumbers)
+
+
+// //How to find prime numbers in given array
+
+// let isPrime = [3, 5, 73, 29, 4, 6, 9, 10, 21, 9808];
+
+// let result = isPrime.filter((num) => {
+//   for (let i = 2; i <= Math.sqrt(num); i++) {
+//     if (num % i === 0) {
+//       return false;
+//     } else {
+//       return true;
+//     }
+//   }
+// })
+
+// console.log(result);
+
+
+
+//Closuers - Most Important Topic in JS
+
+// function greetings(message) {
+//   return function (name) {
+//     return message + " " + name;
+//   }
+// }
+
+// let sayhi = greetings("Hi");
+// let sayhello = greetings("Hello");
+
+// console.log(sayhi("Suyog"));
+// console.log(sayhello("Muley"));
+
+
+// function welcome() {
+
+//   function hi(message) {
+//     let name = "Hi Suyog";
+//     console.log(name + " " + message);
+//   }
+//   return hi;
+// }
+
+// let res = welcome();
+// console.log(res("Hellow"));
+
+
+//Closers with loop
+
+// for (let i = 0; i <= 10; i++) {
+//   setTimeout(function () {
+//     console.log("after " + i + "  Second " + i);
+//   }, i * 1000);
+// }
+
+//IIFE-Immediatly Invoked function experession
+
+(function () {
+
+})();//Syntax
+
+let addition = (function (a, b) {
+  return a + b;
+})(10, 50);
+
+let add = ((a, b) => a + b)(10, 30);//With Arrow Function
+
+console.log(add);
+console.log(addition);
