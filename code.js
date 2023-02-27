@@ -1847,3 +1847,79 @@ says.apply(dog, ['what does cat says?'])
 //call method pass a argument 
 says.call(cat, 'What does cat says?');
 says.call(dog, 'what does dog says?');
+
+
+//Call(), Apply() and Bind()---
+
+//----bind() methods
+
+let car = {
+  speed: 10,
+  start: function () {
+    console.log("Start with " + this.speed + " km/h");
+  }
+}
+
+let aircraft = {
+  speed: 20,
+  fly: function () {
+    console.log("Aircraft Flying");
+  }
+}
+
+
+
+
+
+const AirCraftstart = car.start.bind(aircraft);//bind method called(Brarrow the start method from car obj)
+AirCraftstart();
+
+car.start.call(aircraft);//Call method call immediatly 
+
+
+//Effective use of Call method
+//Find a odd number in array
+
+function isOdd(num) {
+  return num % 2;
+}
+
+function isEven(num) {
+  return num % 2 === 0;
+}
+function getOddNumbers() {
+  return Array.prototype.filter.call(arguments, isOdd);
+}
+
+function getEvenNumbers() {
+  return Array.prototype.filter.call(arguments, isEven);
+}
+
+let oddnumbers = getOddNumbers(10, 4, 2, 5, 7, 4, 1, 23);
+
+let evennumbers = getEvenNumbers(10, 4, 2, 5, 7, 4, 1, 23);
+console.log("Oddnumbers " + oddnumbers);
+console.log("Even Numbers " + evennumbers)
+
+
+//How to find prime numbers in given array
+
+let isPrime = [3, 5, 73, 29, 4, 6, 9, 10, 21, 9808];
+
+let result = isPrime.filter((num) => {
+  for (let i = 2; i <= Math.sqrt(num); i++) {
+    if (num % i === 0) {
+      return false;
+    } else {
+      return true;
+    }
+  }
+})
+
+console.log(result);
+
+
+
+
+
+
