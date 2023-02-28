@@ -1985,15 +1985,59 @@ if (matchFound === false) {
 
 //Should Not use arrow function with Event Listeners
 
-const greeting = document.querySelector('#greeting');
-console.log(greeting);
-const username = document.querySelector('#username');
-console.log(username);
 
-username.addEventListener('keyup', function () {
-  greeting.textContent = 'hi ' + this.value;
-});
+// const username = document.querySelector("#username");
+// const greetings = document.querySelector("#greeting");
 
+// username.addEventListener("keyup", function () {
+//   greetings.textContent = "Hello  " + this.value;
+// });
 
 
+//Rest Operator
 
+// function sum(...arg) {
+//   let total = 0;
+//   for (let num of arg) {
+//     total += num;
+//   }
+//   return total;
+// }
+
+// console.log(sum(1, 2, 3));
+
+
+// //function may pass arguments with various kinds of data types such as number, string, and boolean, and you want to calculate the total of numbers only
+
+
+// function add(...arg) {
+//   return arg
+//     .filter(function (e) {
+//       return typeof e === 'number'
+//     })
+//     .reduce(function (prev, curr) {
+//       return prev + curr;
+//     });
+// }
+
+
+// let res = add(10, null, "Suyog", undefined, 20);
+// console.log(res);
+
+
+
+function filter(numbers, fn) {
+  let result = [];
+  for (let num of numbers) {
+    if (fn(num)) {
+      result.push(num);
+    }
+  }
+  return result;
+}
+
+const numbers = [2, 5, 3, 9, 40, 23, 450];
+
+let findOdd = filter(numbers, (num) => num % 2 != 0);
+
+console.log(findOdd);
