@@ -2026,42 +2026,73 @@ if (matchFound === false) {
 
 
 
-function filter(numbers, fn) {
-  let result = [];
-  for (let num of numbers) {
-    if (fn(num)) {
-      result.push(num);
-    }
-  }
-  return result;
-}
+// function filter(numbers, fn) {
+//   let result = [];
+//   for (let num of numbers) {
+//     if (fn(num)) {
+//       result.push(num);
+//     }
+//   }
+//   return result;
+// }
 
-const numbers = [2, 5, 3, 9, 40, 23, 450];
+// const numbers = [2, 5, 3, 9, 40, 23, 450];
 
-let findOdd = filter(numbers, (num) => num % 2 != 0);
+// let findOdd = filter(numbers, (num) => num % 2 != 0);
 
-console.log(findOdd);
-
-
-
-function download(url, callback) {
-  setTimeout(() => {
-    console.log(`Downloading ${url}`);
-    callback(url);
-  }, 1000);
-}
-
-function process(picture) {
-  console.log(`Process ${picture}`)
-}
-
-let url = "https://wwww.javascripttutorial.net/pic.jpg";
-
-download(url, process);
+// console.log(findOdd);
 
 
-//Promises All Method
 
+// function download(url, callback) {
+//   setTimeout(() => {
+//     console.log(`Downloading ${url}`);
+//     callback(url);
+//   }, 1000);
+// }
+
+// function process(picture) {
+//   console.log(`Process ${picture}`)
+// }
+
+// let url = "https://wwww.javascripttutorial.net/pic.jpg";
+
+// download(url, process);
+
+
+// //Promises All Method
+
+
+// // const p1 = new Promise((resolve, reject) => {
+// //   setTimeout(() => {
+// //     console.log("The First promise has resolved");
+// //     resolve(10);
+// //   }, 1 * 1000);
+// // });
+
+// // const p2 = new Promise((resolve, reject) => {
+// //   setTimeout(() => {
+// //     console.log("The Second promise has resolved");
+// //     resolve(20);
+// //   }, 2 * 1000);
+// // });
+
+// // const p3 = new Promise((resolve, reject) => {
+// //   setTimeout(() => {
+// //     console.log("The third promise has resolved");
+// //     resolve(30);
+// //   }, 3 * 1000);
+// // });
+
+// // Promise.all([p1, p2, p3]).then((results) => {
+// //   const total = results.reduce((a, b) => a + b);
+// //   console.log(`Results:${results}`);
+// //   console.log(`Total:${total}`);
+// // })
+
+
+
+// //Rejecting Promise 
 
 // const p1 = new Promise((resolve, reject) => {
 //   setTimeout(() => {
@@ -2072,8 +2103,8 @@ download(url, process);
 
 // const p2 = new Promise((resolve, reject) => {
 //   setTimeout(() => {
-//     console.log("The Second promise has resolved");
-//     resolve(20);
+//     console.log("The Second promise has failed");
+//     reject('Failed');
 //   }, 2 * 1000);
 // });
 
@@ -2084,37 +2115,25 @@ download(url, process);
 //   }, 3 * 1000);
 // });
 
-// Promise.all([p1, p2, p3]).then((results) => {
-//   const total = results.reduce((a, b) => a + b);
-//   console.log(`Results:${results}`);
-//   console.log(`Total:${total}`);
-// })
+// Promise.all([p1, p2, p3])
+//   .then(console.log)
+//   .catch(console.log);
 
 
 
-//Rejecting Promise 
+//Function Generaor -ES6 Introduces
 
-const p1 = new Promise((resolve, reject) => {
-  setTimeout(() => {
-    console.log("The First promise has resolved");
-    resolve(10);
-  }, 1 * 1000);
-});
+function* generator() {
+  console.log("Invoke 1st Element");
+  yield;
+  console.log("Invoke 2nd Element");
+  yield;
+}
 
-const p2 = new Promise((resolve, reject) => {
-  setTimeout(() => {
-    console.log("The Second promise has failed");
-    reject('Failed');
-  }, 2 * 1000);
-});
+let gen = generator();
 
-const p3 = new Promise((resolve, reject) => {
-  setTimeout(() => {
-    console.log("The third promise has resolved");
-    resolve(30);
-  }, 3 * 1000);
-});
+// for (let g of gen) {
+//   console.log(g);
+// }
 
-Promise.all([p1, p2, p3])
-  .then(console.log)
-  .catch(console.log);
+console.log(gen.next());
