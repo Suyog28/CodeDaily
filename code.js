@@ -2041,3 +2041,20 @@ const numbers = [2, 5, 3, 9, 40, 23, 450];
 let findOdd = filter(numbers, (num) => num % 2 != 0);
 
 console.log(findOdd);
+
+
+
+function download(url, callback) {
+  setTimeout(() => {
+    console.log(`Downloading ${url}`);
+    callback(url);
+  }, 1000);
+}
+
+function process(picture) {
+  console.log(`Process ${picture}`)
+}
+
+let url = "https://wwww.javascripttutorial.net/pic.jpg";
+
+download(url, process);
