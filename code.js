@@ -2143,3 +2143,13 @@ console.log(gen.next());
 let firstName = Symbol("FirstName");
 
 console.log(typeof firstName);
+
+const add = (a, b) => a + b;
+
+try {
+  let result = add(20, 30);
+  console.log(result);
+} catch (e) {
+  console.log(e);
+}
+
