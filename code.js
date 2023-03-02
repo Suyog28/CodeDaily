@@ -2137,3 +2137,9 @@ let gen = generator();
 // }
 
 console.log(gen.next());
+
+//Symbols
+
+let firstName = Symbol("FirstName");
+
+console.log(typeof firstName);
