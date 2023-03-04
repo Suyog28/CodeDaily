@@ -2123,42 +2123,91 @@ if (matchFound === false) {
 
 //Function Generaor -ES6 Introduces
 
-function* generator() {
-  console.log("Invoke 1st Element");
-  yield;
-  console.log("Invoke 2nd Element");
-  yield;
-}
-
-let gen = generator();
-
-// for (let g of gen) {
-//   console.log(g);
+// function* generator() {
+//   console.log("Invoke 1st Element");
+//   yield;
+//   console.log("Invoke 2nd Element");
+//   yield;
 // }
 
-console.log(gen.next());
+// let gen = generator();
 
-//Symbols
+// // for (let g of gen) {
+// //   console.log(g);
+// // }
 
-let firstName = Symbol("FirstName");
+// console.log(gen.next());
 
-console.log(typeof firstName);
+// //Symbols
 
-const add = (a, b) => a + b;
+// let firstName = Symbol("FirstName");
 
-try {
-  let result = add(20, 30);
-  console.log(result);
-} catch (e) {
-  console.log(e);
-}
+// console.log(typeof firstName);
 
-//Export and Import Practice
+// const add = (a, b) => a + b;
+
+// try {
+//   let result = add(20, 30);
+//   console.log(result);
+// } catch (e) {
+//   console.log(e);
+// }
+
+// //Export and Import Practice
 
 
-//NaN Number
+// //NaN Number
 
-const number = "100";
-console.log(typeof number);
-const res = parseInt(number);
-console.log(typeof res);
+// const number = "100";
+// console.log(typeof number);
+// const res = parseInt(number);
+// console.log(typeof res);
+
+// // let weight = parseInt('120kg');
+// // console.log(weight); // 120
+
+// // let weight = parseInt('More than 100kg');
+// // console.log(weight); // 120
+
+// let weight = parseFloat('Infinity');
+// console.log(weight); // 120
+
+// //JSON serialization
+// const resource = {
+//   amount: Infinity
+// };
+// let result = JSON.stringify(resource);
+
+// console.log(result);
+
+//Math methods
+
+//Math.min()
+
+const numArray = [1, 2, 3, 4, 5, 58, -10];
+const res = Math.min(...numArray);
+console.log(res);
+let type;
+
+type = typeof 'Hi';
+console.log(type); // 'string'
+
+type = typeof 100;
+console.log(type); // 'number'
+
+type = typeof 100n;
+console.log(type); // 'bigint'
+
+type = typeof false;
+console.log(type); // 'boolean'
+
+type = typeof Symbol('morning');
+console.log(type); // 'symbol'
+
+
+type = typeof undefined;
+console.log(type); // 'undefined'
+
+
+type = typeof new Date();
+console.log(type); // 'object'
