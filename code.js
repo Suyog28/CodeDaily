@@ -2154,3 +2154,11 @@ try {
 }
 
 //Export and Import Practice
+
+
+//NaN Number
+
+const number = "100";
+console.log(typeof number);
+const res = parseInt(number);
+console.log(typeof res);
