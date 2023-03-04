@@ -2184,50 +2184,109 @@ if (matchFound === false) {
 
 //Math.min()
 
-const numArray = [1, 2, 3, 4, 5, 58, -10];
-const res = Math.min(...numArray);
-console.log(res);
-let type;
+// const numArray = [1, 2, 3, 4, 5, 58, -10];
+// const res = Math.min(...numArray);
+// console.log(res);
+// let type;
 
-type = typeof 'Hi';
-console.log(type); // 'string'
+// type = typeof 'Hi';
+// console.log(type); // 'string'
 
-type = typeof 100;
-console.log(type); // 'number'
+// type = typeof 100;
+// console.log(type); // 'number'
 
-type = typeof 100n;
-console.log(type); // 'bigint'
+// type = typeof 100n;
+// console.log(type); // 'bigint'
 
-type = typeof false;
-console.log(type); // 'boolean'
+// type = typeof false;
+// console.log(type); // 'boolean'
 
-type = typeof Symbol('morning');
-console.log(type); // 'symbol'
-
-
-type = typeof undefined;
-console.log(type); // 'undefined'
+// type = typeof Symbol('morning');
+// console.log(type); // 'symbol'
 
 
-type = typeof new Date();
-console.log(type); // 'object'
+// type = typeof undefined;
+// console.log(type); // 'undefined'
 
 
-//Swapping using Array destructuring
+// type = typeof new Date();
+// console.log(type); // 'object'
 
-let a = 10, b = 20;
 
-[a, b] = [b, a];
+// //Swapping using Array destructuring
 
-console.log(a, b);
+// let a = 10, b = 20;
 
-function stat(a, b) {
-  return [
-    a + b,
-    (a + b) / 2,
-    a - b
-  ]
+// [a, b] = [b, a];
+
+// console.log(a, b);
+
+// function stat(a, b) {
+//   return [
+//     a + b,
+//     (a + b) / 2,
+//     a - b
+//   ]
+// }
+
+// let [sum, average, difference] = stat(20, 10);
+// console.log(sum, average, difference); // 30, 15, 10
+
+const numArray = [2, 3, 6, 8, 9, 10, 11];
+
+// numArray.length = 5;
+numArray.push(100);
+console.log(numArray);
+
+let colors = ['red', 'green', 'blue'];
+let cmyk = ['cyan', 'magenta', 'yellow', 'back'];
+
+
+colors.push(...cmyk);
+// for (let color of cmyk) {
+//   colors.push(color);
+// }
+// console.log(colors);
+console.log(colors);
+
+//Splice Method
+
+colors.splice(2, 3, "White");
+
+console.log(colors);
+
+let circles = [20, 10, 50];
+
+//Caluculate Area of circle
+
+let result = circles.map((redius) => {
+  return Math.floor(Math.PI * redius * redius);
+})
+
+console.log(result);
+
+
+let cities = [
+  { name: 'Los Angeles', population: 3792621 },
+  { name: 'New York', population: 8175133 },
+  { name: 'Chicago', population: 2695598 },
+  { name: 'Houston', population: 2099451 },
+  { name: 'Philadelphia', population: 1526006 }
+];
+
+
+//Filter Method Find largest population more than 3 millions
+
+
+let bigCities = [];
+
+for (let i = 0; i < cities.length; i++) {
+  if (cities[i].population > 3000000) {
+    bigCities.push(cities[i]);
+  }
 }
 
-let [sum, average, difference] = stat(20, 10);
-console.log(sum, average, difference); // 30, 15, 10
+console.log(bigCities);
+//Filter Method
+let City = cities.filter((e) => e.population > 3000000);
+console.log(City);
