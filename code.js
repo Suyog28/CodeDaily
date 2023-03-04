@@ -2211,3 +2211,23 @@ console.log(type); // 'undefined'
 
 type = typeof new Date();
 console.log(type); // 'object'
+
+
+//Swapping using Array destructuring
+
+let a = 10, b = 20;
+
+[a, b] = [b, a];
+
+console.log(a, b);
+
+function stat(a, b) {
+  return [
+    a + b,
+    (a + b) / 2,
+    a - b
+  ]
+}
+
+let [sum, average, difference] = stat(20, 10);
+console.log(sum, average, difference); // 30, 15, 10
