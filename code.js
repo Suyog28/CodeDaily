@@ -2326,3 +2326,36 @@ let names = employees.sort((a, b) => {
 })
 
 console.table(names);
+
+
+//Sorting objects by the date property
+
+let dateSort = employees.sort((a, b) => {
+  let x = new Date(a.hireDate), y = new Date(b.hireDate);
+  return x - y;
+})
+
+console.table(dateSort);
+
+//RegExp 
+
+let str = "Are you Ok? Yes, I'm OK";
+let result = str.match(/OK/gi);
+
+console.log(result);
+
+//BOM Methods
+
+let result1 = confirm('Are you sure you want to delete?');
+
+let message = result1 ? 'You clicked the OK button' :
+  'You clicked the Cancel button';
+
+alert(message);
+
+let lang = prompt('What is your favorite programming language?');
+
+let feedback = lang.toLowerCase() === 'javascript' ? `It's great!` :
+  `It's ${lang}`;
+
+alert(feedback);
