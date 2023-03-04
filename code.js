@@ -2232,61 +2232,97 @@ if (matchFound === false) {
 // let [sum, average, difference] = stat(20, 10);
 // console.log(sum, average, difference); // 30, 15, 10
 
+// const numArray = [2, 3, 6, 8, 9, 10, 11];
+
+// // numArray.length = 5;
+// numArray.push(100);
+// console.log(numArray);
+
+// let colors = ['red', 'green', 'blue'];
+// let cmyk = ['cyan', 'magenta', 'yellow', 'back'];
+
+
+// colors.push(...cmyk);
+// // for (let color of cmyk) {
+// //   colors.push(color);
+// // }
+// // console.log(colors);
+// console.log(colors);
+
+// //Splice Method
+
+// colors.splice(2, 3, "White");
+
+// console.log(colors);
+
+// let circles = [20, 10, 50];
+
+// //Caluculate Area of circle
+
+// let result = circles.map((redius) => {
+//   return Math.floor(Math.PI * redius * redius);
+// })
+
+// console.log(result);
+
+
+// let cities = [
+//   { name: 'Los Angeles', population: 3792621 },
+//   { name: 'New York', population: 8175133 },
+//   { name: 'Chicago', population: 2695598 },
+//   { name: 'Houston', population: 2099451 },
+//   { name: 'Philadelphia', population: 1526006 }
+// ];
+
+
+// //Filter Method Find largest population more than 3 millions
+
+
+// let bigCities = [];
+
+// for (let i = 0; i < cities.length; i++) {
+//   if (cities[i].population > 3000000) {
+//     bigCities.push(cities[i]);
+//   }
+// }
+
+// console.log(bigCities);
+// //Filter Method
+// let City = cities.filter((e) => e.population > 3000000);
+// console.log(City);
+
+//Reduce Methods
 const numArray = [2, 3, 6, 8, 9, 10, 11];
 
-// numArray.length = 5;
-numArray.push(100);
-console.log(numArray);
-
-let colors = ['red', 'green', 'blue'];
-let cmyk = ['cyan', 'magenta', 'yellow', 'back'];
-
-
-colors.push(...cmyk);
-// for (let color of cmyk) {
-//   colors.push(color);
-// }
-// console.log(colors);
-console.log(colors);
-
-//Splice Method
-
-colors.splice(2, 3, "White");
-
-console.log(colors);
-
-let circles = [20, 10, 50];
-
-//Caluculate Area of circle
-
-let result = circles.map((redius) => {
-  return Math.floor(Math.PI * redius * redius);
-})
-
-console.log(result);
-
-
-let cities = [
-  { name: 'Los Angeles', population: 3792621 },
-  { name: 'New York', population: 8175133 },
-  { name: 'Chicago', population: 2695598 },
-  { name: 'Houston', population: 2099451 },
-  { name: 'Philadelphia', population: 1526006 }
-];
-
-
-//Filter Method Find largest population more than 3 millions
-
-
-let bigCities = [];
-
-for (let i = 0; i < cities.length; i++) {
-  if (cities[i].population > 3000000) {
-    bigCities.push(cities[i]);
-  }
+let sum = 0;
+for (let i = 0; i < numArray.length; i++) {
+  sum += numArray[i];
 }
 
-console.log(bigCities);
-//Filter Method
-let City = cities.filter((e) => e.population > 3000000);
-console.log(City);
+console.log(sum);
+
+//Using reduce method
+
+let total = numArray.reduce((a, b) => a + b);
+console.log(total);
+
+
+//Sort Method
+let employees = [
+  { name: 'John', salary: 90000, hireDate: "July 1, 2010" },
+  { name: 'David', salary: 75000, hireDate: "August 15, 2009" },
+  { name: 'Ana', salary: 80000, hireDate: "December 12, 2011" }
+];
+
+let salary = employees.sort((a, b) => b.salary - a.salary);
+
+console.table(salary);
+
+//Sorting objects by a string property
+
+let names = employees.sort((a, b) => {
+  let x = a.name.toUpperCase(), y = b.name.toUpperCase();
+  return x == y ? 0 : x > y ? 1 : -1;
+})
+
+console.table(names);
