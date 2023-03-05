@@ -2292,70 +2292,70 @@ if (matchFound === false) {
 // console.log(City);
 
 //Reduce Methods
-const numArray = [2, 3, 6, 8, 9, 10, 11];
+// const numArray = [2, 3, 6, 8, 9, 10, 11];
 
-let sum = 0;
-for (let i = 0; i < numArray.length; i++) {
-  sum += numArray[i];
-}
+// let sum = 0;
+// for (let i = 0; i < numArray.length; i++) {
+//   sum += numArray[i];
+// }
 
-console.log(sum);
+// console.log(sum);
 
-//Using reduce method
+// //Using reduce method
 
-let total = numArray.reduce((a, b) => a + b);
-console.log(total);
-
-
-//Sort Method
-let employees = [
-  { name: 'John', salary: 90000, hireDate: "July 1, 2010" },
-  { name: 'David', salary: 75000, hireDate: "August 15, 2009" },
-  { name: 'Ana', salary: 80000, hireDate: "December 12, 2011" }
-];
-
-let salary = employees.sort((a, b) => b.salary - a.salary);
-
-console.table(salary);
-
-//Sorting objects by a string property
-
-let names = employees.sort((a, b) => {
-  let x = a.name.toUpperCase(), y = b.name.toUpperCase();
-  return x == y ? 0 : x > y ? 1 : -1;
-})
-
-console.table(names);
+// let total = numArray.reduce((a, b) => a + b);
+// console.log(total);
 
 
-//Sorting objects by the date property
+// //Sort Method
+// let employees = [
+//   { name: 'John', salary: 90000, hireDate: "July 1, 2010" },
+//   { name: 'David', salary: 75000, hireDate: "August 15, 2009" },
+//   { name: 'Ana', salary: 80000, hireDate: "December 12, 2011" }
+// ];
 
-let dateSort = employees.sort((a, b) => {
-  let x = new Date(a.hireDate), y = new Date(b.hireDate);
-  return x - y;
-})
+// let salary = employees.sort((a, b) => b.salary - a.salary);
 
-console.table(dateSort);
+// console.table(salary);
 
-//RegExp 
+// //Sorting objects by a string property
 
-let str = "Are you Ok? Yes, I'm OK";
-let result = str.match(/OK/gi);
+// let names = employees.sort((a, b) => {
+//   let x = a.name.toUpperCase(), y = b.name.toUpperCase();
+//   return x == y ? 0 : x > y ? 1 : -1;
+// })
 
-console.log(result);
+// console.table(names);
 
-//BOM Methods
 
-let result1 = confirm('Are you sure you want to delete?');
+// //Sorting objects by the date property
 
-let message = result1 ? 'You clicked the OK button' :
-  'You clicked the Cancel button';
+// let dateSort = employees.sort((a, b) => {
+//   let x = new Date(a.hireDate), y = new Date(b.hireDate);
+//   return x - y;
+// })
 
-alert(message);
+// console.table(dateSort);
 
-let lang = prompt('What is your favorite programming language?');
+// //RegExp 
 
-let feedback = lang.toLowerCase() === 'javascript' ? `It's great!` :
-  `It's ${lang}`;
+// let str = "Are you Ok? Yes, I'm OK";
+// let result = str.match(/OK/gi);
 
-alert(feedback);
+// console.log(result);
+
+// //BOM Methods
+
+// let result1 = confirm('Are you sure you want to delete?');
+
+// let message = result1 ? 'You clicked the OK button' :
+//   'You clicked the Cancel button';
+
+// alert(message);
+
+// let lang = prompt('What is your favorite programming language?');
+
+// let feedback = lang.toLowerCase() === 'javascript' ? `It's great!` :
+//   `It's ${lang}`;
+
+// alert(feedback);

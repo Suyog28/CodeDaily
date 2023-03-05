@@ -62,11 +62,11 @@
       style="width: 50%"
       onClick="makeInvisible();"
     />-->
-    <div id="new">
+    <!-- <div id="new">
       <p id="p1">Tutorix</p>
       <p id="p2">Tutorialspoint</p>
     </div>
-    <!-- <div></div> -->
+     <div></div> --
     <details>
       <summary>Hoover Sukhdeep</summary>
       <p>
@@ -82,7 +82,7 @@
       id="username"
       placeholder="Enter a username"
     />
-    <div id="greeting"></div>
+    <div id="greeting"></div> -->
     <!-- <p id="p1" class="Big" onmouseover="bigName();">Suyog Muley</p>
      <button>Stop Here!!!</button> 
     <h1 class="heading1">Hello World</h1>
@@ -98,5 +98,52 @@
     <!--     <script src="/part1/05.js" defer></script> -->
     <!-- <script src="/part1/07.js" defer></script> -->
     <!-- <script src="code1.js"></script> -->
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <meta charset="utf-8" />
+        <title>JavaScript getElementsByName Demo</title>
+      </head>
+
+      <body>
+        <p>Please rate the service:</p>
+        <p>
+          <label for="very-poor">
+            <input type="radio" name="rate" value="Very poor" id="very-poor" />
+            Very poor
+          </label>
+          <label for="poor">
+            <input type="radio" name="rate" value="Poor" id="poor" /> Poor
+          </label>
+          <label for="ok">
+            <input type="radio" name="rate" value="OK" id="ok" /> OK
+          </label>
+          <label for="good">
+            <input type="radio" name="rate" value="Good" /> Good
+          </label>
+          <label for="very-good">
+            <input type="radio" name="rate" value="Very Good" id="very-good" />
+            Very Good
+          </label>
+        </p>
+        <p>
+          <button id="btnRate">Submit</button>
+        </p>
+        <p id="output"></p>
+        <script>
+          let btn = document.getElementById("btnRate");
+          let output = document.getElementById("output");
+
+          btn.addEventListener("click", () => {
+            let rates = document.getElementsByName("rate");
+            rates.forEach((rate) => {
+              if (rate.checked) {
+                output.innerText = `You selected: ${rate.value}`;
+              }
+            });
+          });
+        </script>
+      </body>
+    </html>
   </body>
 </html>
