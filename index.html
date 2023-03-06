@@ -130,6 +130,20 @@
           <button id="btnRate">Submit</button>
         </p>
         <p id="output"></p>
+
+        <div id="container">
+          <label for="Gender">Gender</label>
+          <label for="Male">
+            <input type="radio" name="gender" id="male" />
+            Male
+          </label>
+          <label for="Female">
+            <input type="radio" name="gender" id="Female" />
+            Female
+          </label>
+          <button id="subBtn">Submit</button>
+          <p id="selected"></p>
+        </div>
         <script>
           let btn = document.getElementById("btnRate");
           let output = document.getElementById("output");
@@ -139,6 +153,19 @@
             rates.forEach((rate) => {
               if (rate.checked) {
                 output.innerText = `You selected: ${rate.value}`;
+              }
+            });
+          });
+
+          let Btn = document.getElementById("subBtn");
+          let sel = document.getElementById("selected");
+
+          Btn.addEventListener("click", () => {
+            let genders = document.getElementsByName("gender");
+            console.log(genders);
+            genders.forEach((gender) => {
+              if (gender.checked) {
+                sel.innerText = `You selected:${gender.value}`;
               }
             });
           });
