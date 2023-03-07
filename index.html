@@ -156,19 +156,6 @@
               }
             });
           });
-
-          let Btn = document.getElementById("subBtn");
-          let sel = document.getElementById("selected");
-
-          Btn.addEventListener("click", () => {
-            let genders = document.getElementsByName("gender");
-            console.log(genders);
-            genders.forEach((gender) => {
-              if (gender.checked) {
-                sel.innerText = `You selected:${gender.value}`;
-              }
-            });
-          });
         </script>
       </body>
     </html>
