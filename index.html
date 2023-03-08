@@ -107,6 +107,9 @@
 
       <body>
         <p>Please rate the service:</p>
+        <ul id="menu">
+          <li>Home</li>
+        </ul>
         <p>
           <label for="very-poor">
             <input type="radio" name="rate" value="Very poor" id="very-poor" />
@@ -156,6 +159,19 @@
               }
             });
           });
+
+          let Bold = document.createElement("h1");
+          Bold.innerText = "Women International Day";
+          document.body.appendChild(Bold);
+          const menu = document.querySelector("#menu");
+          let li = document.createElement("li");
+          li.innerText = "Products";
+          menu.appendChild(li);
+
+          li = document.createElement("li");
+          li.textContent = "About Us";
+
+          menu.appendChild(li);
         </script>
       </body>
     </html>
