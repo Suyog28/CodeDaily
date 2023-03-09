@@ -147,6 +147,18 @@
           <button id="subBtn">Submit</button>
           <p id="selected"></p>
         </div>
+
+        <ul id="first-list">
+          <li>Everest</li>
+          <li>Fuji</li>
+          <li>Kilimanjaro</li>
+        </ul>
+
+        <ul id="second-list">
+          <li>Karakoram Range</li>
+          <li>Denali</li>
+          <li>Mont Blanc</li>
+        </ul>
         <script>
           let btn = document.getElementById("btnRate");
           let output = document.getElementById("output");
@@ -181,6 +193,12 @@
 
           menu.appendChild(createMenuItem("Login"));
           menu.appendChild(createMenuItem("Admin"));
+
+          const firstElement = document.querySelector("#first-list");
+          const everest = firstElement.firstElementChild;
+
+          const secondElement = document.querySelector("#second-list");
+          secondElement.appendChild(everest);
         </script>
       </body>
     </html>
