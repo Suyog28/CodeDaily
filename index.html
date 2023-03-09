@@ -172,6 +172,15 @@
           li.textContent = "About Us";
 
           menu.appendChild(li);
+
+          function createMenuItem(name) {
+            let li = document.createElement("li");
+            li.textContent = name;
+            return li;
+          }
+
+          menu.appendChild(createMenuItem("Login"));
+          menu.appendChild(createMenuItem("Admin"));
         </script>
       </body>
     </html>
