@@ -163,6 +163,7 @@
         <ul id="app">
           <li>JavaScript</li>
         </ul>
+        <p id="content">JavaScript Setting Style Demo!</p>
         <script>
           let btn = document.getElementById("btnRate");
           let output = document.getElementById("output");
@@ -226,6 +227,11 @@
             return li;
           });
           app.append(...nodes);
+
+          let content = document.querySelector("#content");
+          content.style.color = "red";
+          content.style.fontWeight = "bold";
+          content.style.fontSize = "42px";
         </script>
       </body>
     </html>
