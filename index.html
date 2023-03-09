@@ -159,6 +159,7 @@
           <li>Denali</li>
           <li>Mont Blanc</li>
         </ul>
+        <ul id="language"></ul>
         <script>
           let btn = document.getElementById("btnRate");
           let output = document.getElementById("output");
@@ -199,6 +200,18 @@
 
           const secondElement = document.querySelector("#second-list");
           secondElement.appendChild(everest);
+
+          let languages = ["JS", "TypeScript", "Elm", "Dart", "Scala"];
+          let langEl = document.querySelector("#language");
+
+          let fragment = new DocumentFragment();
+          languages.forEach((language) => {
+            let li = document.createElement("li");
+            li.innerHTML = language;
+            fragment.appendChild(li);
+          });
+
+          langEl.appendChild(fragment);
         </script>
       </body>
     </html>
