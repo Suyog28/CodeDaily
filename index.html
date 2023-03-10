@@ -93,7 +93,6 @@
     <h1 class="heading6">Hello World</h1>
     <h1 class="heading7">Hello World</h1> -->
     <script src="./code.js" defer></script>
-
     <!-- <script src="dailycode.js" defer></script> -->
     <!--     <script src="/part1/05.js" defer></script> -->
     <!-- <script src="/part1/07.js" defer></script> -->
@@ -163,8 +162,29 @@
         <ul id="app">
           <li>JavaScript</li>
         </ul>
+        <input type="text" id="message" />
         <p id="content">JavaScript Setting Style Demo!</p>
+
+        <form id="form">
+          <input type="text" placeholder="username" />
+          <input type="password" placeholder="password" />
+        </form>
         <script>
+          let text = document.querySelector('input[type="password"]');
+          text.addEventListener("focus", (e) => {
+            e.target.style.backgroundColor = "yellow";
+          });
+
+          text.addEventListener("blur", (e) => {
+            e.target.style.backgroundColor = "";
+          });
+          window.addEventListener("scroll", (event) => {
+            console.log("Scrolling...");
+          });
+          let textBox = document.getElementById("message");
+          textBox.addEventListener("keydown", (event) => {
+            console.log(`key=${event.key},code=${event.code}`);
+          });
           let btn = document.getElementById("btnRate");
           let output = document.getElementById("output");
 
@@ -180,6 +200,7 @@
           let Bold = document.createElement("h1");
           Bold.innerText = "Women International Day";
           document.body.appendChild(Bold);
+
           const menu = document.querySelector("#menu");
           let li = document.createElement("li");
           li.innerText = "Products";
@@ -189,7 +210,6 @@
           li.textContent = "About Us";
 
           menu.appendChild(li);
-
           function createMenuItem(name) {
             let li = document.createElement("li");
             li.textContent = name;
@@ -226,6 +246,7 @@
             li.textContent = lang;
             return li;
           });
+
           app.append(...nodes);
 
           let content = document.querySelector("#content");
