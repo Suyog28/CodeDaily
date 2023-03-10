@@ -148,7 +148,7 @@
           <p id="selected"></p>
         </div>
 
-        <ul id="first-list">
+        <ul id="first-list" class="firstList">
           <li>Everest</li>
           <li>Fuji</li>
           <li>Kilimanjaro</li>
@@ -232,6 +232,11 @@
           content.style.color = "red";
           content.style.fontWeight = "bold";
           content.style.fontSize = "42px";
+
+          let firstClass = document.querySelector("#first-list");
+          firstClass.classList.add("suyog");
+          console.log(firstClass);
+          console.log(firstClass.className);
         </script>
       </body>
     </html>
