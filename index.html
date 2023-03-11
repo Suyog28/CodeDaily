@@ -105,6 +105,35 @@
       </head>
 
       <body>
+        <div class="container">
+          <form action="signup.html" method="post" id="signup">
+            <h1>Sign Up</h1>
+            <div class="field">
+              <label for="name">Name:</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Enter your fullname"
+              />
+              <small></small>
+            </div>
+            <div class="field">
+              <label for="email">Email:</label>
+              <input
+                type="text"
+                id="email"
+                name="email"
+                placeholder="Enter your email address"
+              />
+              <small></small>
+            </div>
+            <div class="field">
+              <button type="submit" class="full">Subscribe</button>
+            </div>
+          </form>
+        </div>
+
         <p>Please rate the service:</p>
         <ul id="menu">
           <li>Home</li>
@@ -165,22 +194,22 @@
         <input type="text" id="message" />
         <p id="content">JavaScript Setting Style Demo!</p>
 
-        <form id="form">
+        <!-- <form id="form">
           <input type="text" placeholder="username" />
           <input type="password" placeholder="password" />
-        </form>
+        </form> -->
         <script>
-          let text = document.querySelector('input[type="password"]');
-          text.addEventListener("focus", (e) => {
-            e.target.style.backgroundColor = "yellow";
-          });
+          // let text = document.querySelector('input[type="password"]');
+          // text.addEventListener("focus", (e) => {
+          //   e.target.style.backgroundColor = "yellow";
+          // });
 
-          text.addEventListener("blur", (e) => {
-            e.target.style.backgroundColor = "";
-          });
-          window.addEventListener("scroll", (event) => {
-            console.log("Scrolling...");
-          });
+          // text.addEventListener("blur", (e) => {
+          //   e.target.style.backgroundColor = "";
+          // });
+          // window.addEventListener("scroll", (event) => {
+          //   console.log("Scrolling...");
+          // });
           let textBox = document.getElementById("message");
           textBox.addEventListener("keydown", (event) => {
             console.log(`key=${event.key},code=${event.code}`);
@@ -258,7 +287,16 @@
           firstClass.classList.add("suyog");
           console.log(firstClass);
           console.log(firstClass.className);
+
+          const form = document.getElementById("signup");
+          let name = form.elements["name"];
+          let email = form.elements["email"];
+
+          let fullname = name.value;
+          let emailaddress = email.value;
+          console.log(fullname, emailaddress);
         </script>
+        <script src="app.js"></script>
       </body>
     </html>
   </body>
