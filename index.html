@@ -198,7 +198,13 @@
           <input type="text" placeholder="username" />
           <input type="password" placeholder="password" />
         </form> -->
+        <label for="accept">
+          <input type="checkbox" id="accept" name="accept" value="yes" /> Accept
+        </label>
+
         <script>
+          const cb = document.querySelector("#accept");
+          console.log(cb.checked); // false
           // let text = document.querySelector('input[type="password"]');
           // text.addEventListener("focus", (e) => {
           //   e.target.style.backgroundColor = "yellow";
@@ -296,7 +302,7 @@
           let emailaddress = email.value;
           console.log(fullname, emailaddress);
         </script>
-        <script src="app.js"></script>
+        <!-- <script src="app.js"></script> -->
       </body>
     </html>
   </body>

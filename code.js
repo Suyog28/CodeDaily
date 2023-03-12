@@ -2359,3 +2359,19 @@ if (matchFound === false) {
 //   `It's ${lang}`;
 
 // alert(feedback);
+
+
+//1.Write a function that takes two numbers as arguments and returns their sum.
+function sum(a, b) {
+  return a + b;
+}
+console.log(sum(10, 20));
+
+//2.Write a function that takes a string as an argument and returns its length.
+function str(word) {
+  return word.length;
+}
+console.log(str("suyog"));
+
+//3.Write a program that takes two numbers and displays their sum, difference, product, and quotient.
+
