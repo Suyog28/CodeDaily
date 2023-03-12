@@ -2375,3 +2375,15 @@ console.log(str("suyog"));
 
 //3.Write a program that takes two numbers and displays their sum, difference, product, and quotient.
 
+let num1 = 10;
+let num2 = 20;
+
+let add = num1 + num2;
+let difference = num1 - num2;
+let product = num1 * num2;
+let quotient = num1 / num2;
+
+console.log(add);
+console.log(difference);
+console.log(product);
+console.log(quotient);
