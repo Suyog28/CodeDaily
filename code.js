@@ -2387,3 +2387,119 @@ console.log(add);
 console.log(difference);
 console.log(product);
 console.log(quotient);
+
+//4.Write a function that takes two numbers as arguments and returns the larger number.
+function largerNum(a, b) {
+  if (a > b) {
+    console.log(`A is greater than B:${a}`);
+  } else {
+    console.log(`B is greater than A:${b}`);
+  }
+}
+
+largerNum(111, 13);
+
+//5.Write a program that displays a string in reverse order.
+
+function reversString(name) {
+  const res = name.split("").reverse().join("");
+  return res;
+}
+
+console.log(reversString("Suyog"));
+
+//6.Write a program that takes a number and checks whether it is positive, negative, or zero.
+
+function number1(number) {
+  if (number > 0) {
+    console.log("Number is positive");
+  } else if (number < 0) {
+    console.log("Number is negative ");
+  } else {
+    console.log("Number is zero")
+  }
+}
+
+number1(0);
+
+function longString(sentence) {
+  return sentence.split("").reverse().join("");
+}
+
+console.log(longString("Suyog Vijay Muley"));
+
+//7.Write a program that takes a number and prints the multiplication table for that number.
+
+function muplify(number) {
+
+  for (let i = 1; i <= 10; i++) {
+    let store = number * i;
+    console.log(store);
+  }
+}
+
+muplify(10);
+
+//8.Write a program that takes a number and calculates the sum of all numbers from 1 to that number.
+
+function calculateSum(n) {
+  let sum = 0;
+  for (let i = 1; i <= n; i++) {
+    sum += i;
+  }
+  return sum;
+}
+
+console.log(calculateSum(10));
+
+//9.Write a program that takes a string and prints out the number of vowels in the string.
+
+function vowelsFind(str) {
+  let vowels = ["a", "e", "i", "o", "u"];
+  let count = 0;
+  for (let i = 0; i < str.length; i++) {
+    if (vowels.includes(str[i].toLowerCase())) {
+      count++;
+    }
+  }
+  return count;
+}
+
+console.log(vowelsFind("CodeHelp"));
+
+
+function vowels(letters) {
+  let vowel = ["a", "e", "i", "o", "u"];
+  let count = 0;
+
+  for (let i = 0; i < letters.length; i++) {
+    if (vowel.includes(letters[i].toLowerCase())) {
+      count++;
+    }
+  }
+  return count;
+}
+console.log(vowels("Codehelp"));
+
+//10.Write a function that takes two arrays of integers as arguments and returns an array of the common elements in both arrays, without any duplicates. The returned array should be sorted in ascending order.
+//For example, given the arrays[1, 2, 3, 4, 5] and[3, 4, 5, 6, 7], the function should return [3, 4, 5].
+//Hint: You may need to use nested loops and conditional statements to solve this problem.
+
+function findCommonElement(arr1, arr2) {
+  let commonElement = [];
+  for (let i = 0; i < arr1.length; i++) {
+    if (arr2.includes(arr1[i])) {
+      if (!commonElement.includes(arr1[i])) {
+        commonElement.push(arr1[i]);
+      }
+    }
+  }
+
+  commonElement.sort((a, b) => a - b);
+  return commonElement;
+}
+
+const arr1 = [1, 2, 3, 4, 5];
+const arr2 = [3, 4, 5, 6, 74];
+
+console.log(findCommonElement(arr1, arr2));
