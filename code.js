@@ -2468,18 +2468,18 @@ function vowelsFind(str) {
 console.log(vowelsFind("CodeHelp"));
 
 
-function vowels(letters) {
-  let vowel = ["a", "e", "i", "o", "u"];
-  let count = 0;
+// function vowels(letters) {
+//   let vowel = ["a", "e", "i", "o", "u"];
+//   let count = 0;
 
-  for (let i = 0; i < letters.length; i++) {
-    if (vowel.includes(letters[i].toLowerCase())) {
-      count++;
-    }
-  }
-  return count;
-}
-console.log(vowels("Codehelp"));
+//   for (let i = 0; i < letters.length; i++) {
+//     if (vowel.includes(letters[i].toLowerCase())) {
+//       count++;
+//     }
+//   }
+//   return count;
+// }
+// console.log(vowels("Codehelp"));
 
 //10.Write a function that takes two arrays of integers as arguments and returns an array of the common elements in both arrays, without any duplicates. The returned array should be sorted in ascending order.
 //For example, given the arrays[1, 2, 3, 4, 5] and[3, 4, 5, 6, 7], the function should return [3, 4, 5].
