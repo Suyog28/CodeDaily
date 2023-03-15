@@ -2442,15 +2442,15 @@ muplify(10);
 
 //8.Write a program that takes a number and calculates the sum of all numbers from 1 to that number.
 
-function calculateSum(n) {
-  let sum = 0;
-  for (let i = 1; i <= n; i++) {
-    sum += i;
-  }
-  return sum;
-}
+// function calculateSum(n) {
+//   let sum = 0;
+//   for (let i = 1; i <= n; i++) {
+//     sum += i;
+//   }
+//   return sum;
+// }
 
-console.log(calculateSum(10));
+// console.log(calculateSum(10));
 
 //9.Write a program that takes a string and prints out the number of vowels in the string.
 
@@ -2499,7 +2499,7 @@ console.log(vowelsFind("CodeHelp"));
 //   return commonElement;
 // }
 
-const arr1 = [1, 2, 3, 4, 5];
-const arr2 = [3, 4, 5, 6, 74];
+// const arr1 = [1, 2, 3, 4, 5];
+// const arr2 = [3, 4, 5, 6, 74];
 
-console.log(findCommonElement(arr1, arr2));
+// console.log(findCommonElement(arr1, arr2));
