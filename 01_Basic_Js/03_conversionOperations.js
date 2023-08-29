@@ -18,3 +18,4 @@ console.log(typeof(numtoString));
 
 // *************Operations*************
 
+// Arithmatic operation
