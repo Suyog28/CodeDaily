@@ -50,3 +50,64 @@ JsUser.greetingTwo = function(){
 
 console.log(JsUser.greetingTwo());
 
+//const tinderObject = new Object(); //Singleton Object
+
+const newObj = {}; //Non-Singleton Object
+
+newObj.id = "123abc";
+newObj.name = "Sammy"
+
+// console.log(newObj);
+
+const user = {
+    email:"Suyogvmuley@gmail.com",
+    fullName:{
+        userFullName:{
+            firstName:"Suyog",
+            lastName:"Muley"
+        }
+    }
+}
+
+console.log(user.fullName.userFullName);
+
+const UserDetails = {
+    city:"Pune",
+    Mobile:"3939393939",
+    State:"MH"
+}
+
+const joinObject = Object.assign({}, user, UserDetails);
+// console.log(joinObject);
+
+const spredConcat = {...UserDetails,...user}
+// console.log(spredConcat);
+
+//DB Multiple Ojects
+
+const UserDb = [
+    {
+        id:1,
+        name:"Suyog"
+    },
+    {
+        id:2,
+        name:"Suyogv"
+    },
+    {
+        id:3,
+        name:"Suyogd"
+    }
+];
+
+// console.log(Object.keys(UserDb));
+// console.log(Object.values(UserDb));
+// console.log(Object.entries(UserDb));
+
+for (let items in UserDb){
+    console.log(items)
+}
+
+for(let items of UserDb){
+    console.log(items.name)
+}
