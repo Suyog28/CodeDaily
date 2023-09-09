@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manulation</title>
+</head>
+<style>
+    .background{
+        background-color: black;
+        color: aliceblue;
+    }
+</style>
+<body class="background">
+    <!-- <div id="parent" class="names">
+    <h1 id="newTitle" class="heading">Suyog Muley learining again DOM</h1>
+        <ul>
+            <li>Javascript</li>
+            <li>PHP</li>
+            <li>Node.Js</li>
+            <li>AngularJS</li>
+        </ul> -->
+    <!-- </div> -->
+
+<div class="parent" id = "Header">
+
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thusday</div>
+
+</div>
+    
+    <script>
+      const parent = document.querySelector(".parent");
+    //   console.log(parent);
+    //   console.log(parent.children);
+    // console.log(parent.children[0].innerHTML);
+
+    for (let index = 0; index < parent.children.length; index++) {
+        console.log(parent.children[index].innerHTML);
+    }
+
+    parent.children[0].style.color = "orange";
+    parent.children[0].style.fontSize = "40px";
+
+    console.log(parent.firstElementChild);
+
+
+        
+    </script>
+</body>
+</html>
