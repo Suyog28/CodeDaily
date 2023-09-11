@@ -39,12 +39,16 @@
 
     for (let index = 0; index < parent.children.length; index++) {
         console.log(parent.children[index].innerHTML);
+        parent.children[index].style.color = "orange";
+        parent.children[index].style.fontSize = "40px";
     }
 
-    parent.children[0].style.color = "orange";
-    parent.children[0].style.fontSize = "40px";
+    // parent.children.style.color = "orange";
+  
 
     console.log(parent.firstElementChild);
+
+
 
 
         
