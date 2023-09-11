@@ -23,16 +23,21 @@
     <!-- </div> -->
 
 <div class="parent" id = "Header">
-
         <div class="day">Monday</div>
         <div class="day">Tuesday</div>
         <div class="day">Wednesday</div>
         <div class="day">Thusday</div>
 
 </div>
+
+<ul class= "langName">
+    <li>Javascript</li>
+</ul>
     
     <script>
-      const parent = document.querySelector(".parent");
+
+         //Lecter 1 & 2 +++++++
+    //   const parent = document.querySelector(".parent");
     //   console.log(parent);
     //   console.log(parent.children);
     // console.log(parent.children[0].innerHTML);
@@ -54,7 +59,7 @@
 
     // console.log(parent.firstElementChild);
 
-    const dayOne = document.querySelector(".day");
+    // const dayOne = document.querySelector(".day");
     // console.log(dayOne);
     // console.log(dayOne.parentElement)
     // console.log(dayOne.nextElementSibling)
@@ -63,19 +68,54 @@
     // console.log(parent.childNodes)
     // console.log(dayOne.innerHTML)
 
-    const divElement = document.createElement("div");
-    console.log(divElement);
-    divElement.id = "MyId"
-    divElement.className = "newDiv"
-    divElement.setAttribute("title","NewDivTitle")
-    divElement.style.fontSize = "20px"
-    divElement.style.backgroundColor = "pink"
-    divElement.style.padding = "20px"
-    // divElement.innerText = "This is new Div"
-    const newElement = document.createTextNode("This is new Item");
-    divElement.appendChild(newElement);
-    document.body.appendChild(divElement);
+    //Lecter 3 +++++++
+    // const divElement = document.createElement("div");
+    // console.log(divElement);
+    // divElement.id = "MyId"
+    // divElement.className = "newDiv"
+    // divElement.setAttribute("title","NewDivTitle")
+    // divElement.style.fontSize = "20px"
+    // divElement.style.backgroundColor = "pink"
+    // divElement.style.padding = "20px"
+    // // divElement.innerText = "This is new Div"
+    // const newElement = document.createTextNode("This is new Item");
+    // divElement.appendChild(newElement);
+    // document.body.appendChild(divElement);
 
+    //Lecter 4 +++++++
+
+    function addnewItem(langName){
+        const newItem = document.createElement("li");
+        newItem.innerText = `${langName}`;
+        document.querySelector(".langName").appendChild(newItem);
+    }
+    addnewItem("Python");
+    addnewItem("Java");
+    
+    function addItemOptimize(langName){
+        const li = document.createElement("li");
+        li.appendChild(document.createTextNode(langName));
+        document.querySelector(".langName").appendChild(li);
+    }
+
+    addItemOptimize("Angular");
+    addItemOptimize("Mojo");
+
+    //Edit 
+    const li = document.querySelector("li:nth-child(2)");
+    li.outerHTML = "<li>NodeJs</li>"
+
+    //Edit 2
+
+    const li2 = document.querySelector("li:first-Child");
+    console.log(li2);
+    const liItem = document.createElement("li");
+    liItem.textContent = "PHP"
+    li2.replaceWith(liItem);
+
+    //Delete
+    const lastElement = document.querySelector("li:last-Child");
+    lastElement.remove();
     </script>
 </body>
 </html>
