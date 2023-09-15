@@ -77,3 +77,78 @@ const btn = document.querySelector("button");
 //   dot.style.top = (event.pageY - 4) + "px";
 //   document.body.appendChild(dot);
 // });
+
+//Mouse Motion
+// let lastX; // Tracks the last observed mouse X position
+// let bar = document.querySelector("div");
+// bar.addEventListener("mousedown", event => {
+//   if (event.button == 0) {
+//     lastX = event.clientX;
+//     window.addEventListener("mousemove", moved);
+//     event.preventDefault(); // Prevent selection
+//   }
+// });
+
+// function moved(event) {
+//   if (event.buttons == 0) {
+//     window.removeEventListener("mousemove", moved);
+//   } else {
+//     let dist = event.clientX - lastX;
+//     let newWidth = Math.max(10, bar.offsetWidth + dist);
+//     bar.style.width = newWidth + "px";
+//     lastX = event.clientX;
+//   }
+// }
+
+//Mouse Mover
+// function update(event) {
+//   for (let dot; dot = document.querySelector("dot");) {
+//     dot.remove();
+//   }
+//   for (let i = 0; i < event.touches.length; i++) {
+//     let {pageX, pageY} = event.touches[i];
+//     let dot = document.createElement("dot");
+//     dot.style.left = (pageX - 50) + "px";
+//     dot.style.top = (pageY - 50) + "px";
+//     document.body.appendChild(dot);
+//   }
+// }
+// window.addEventListener("touchstart", update);
+// window.addEventListener("touchmove", update);
+// window.addEventListener("touchend", update);
+
+//Scroll Event
+// Create some content
+// document.body.appendChild(document.createTextNode(
+//   "supercalifragilisticexpialidocious ".repeat(1000)));
+
+// let bar = document.querySelector("#progress");
+// window.addEventListener("scroll", () => {
+//   let max = document.body.scrollHeight - innerHeight;
+//   bar.style.width = `${(pageYOffset / max) * 100}%`;
+// });
+
+//Focus Event
+
+// let help = document.querySelector("#help");
+// let fields = document.querySelectorAll("input");
+// for (let field of Array.from(fields)) {
+//   field.addEventListener("focus", event => {
+//     let text = event.target.getAttribute("data-help");
+//     help.textContent = text;
+//   });
+//   field.addEventListener("blur", event => {
+//     help.textContent = "";
+//   });
+// }
+
+
+document.querySelector("#images")
+.addEventListener("click", (e)=>{
+  console.log(e.target.tagName);
+ if(e.target.tagName === "IMG") {
+  const removeIt = e.target.parentNode;
+  removeIt.remove();
+ }
+
+})

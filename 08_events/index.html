@@ -4,11 +4,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        body {
+          height: 200px;
+          background: beige;
+        }
+        .dot {
+          height: 8px; width: 8px;
+          border-radius: 4px; /* rounds corners */
+          background: blue;
+          position: absolute;
+        }
+        dot { position: absolute; display: block;
+        border: 2px solid red; border-radius: 50px;
+        height: 100px; width: 100px; }
+
+        #progress {
+    border-bottom: 2px solid blue;
+    width: 0;
+    position: fixed;
+    top: 0; left: 0;
+  }
+
+      </style>
 </head>
 <body>
+    <p>Name: <input type="text" data-help="Your full name"></p>
+<p>Age: <input type="text" data-help="Your age in years"></p>
+<p id="help"></p>
+    <div id="progress"></div>
     <button><h1>Click Here To chnage Background Color</h1></button>
     <p>This is praragraph Tag</p>
     <button>A</button><button>B</button><button>C</button>
+    <p>Touch this page</p>
+    <p>Drag the bar to change its width:</p>
+    <div style="background: orange; width: 60px; height: 20px">
+    </div>
+
+    <h2>Amazing image</h2>
+    <div >
+        <ul id="images">
+            <li><img width="200px" id="photoshop" src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="photoshop"></li>
+            <li><img width="200px" id="japan" src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="river" src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="" ></li>
+            <li><img width="200px" id="prayer" src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+        </ul>
+   </div>
     <script src="./eventBasic.js"></script>
 </body>
 </html>
