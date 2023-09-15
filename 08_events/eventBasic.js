@@ -32,9 +32,32 @@ const btn = document.querySelector("button");
 
 // btn.addEventListener("click", click)
 
-document.body.addEventListener("click", event => {
-    if (event.target.nodeName == "BUTTON") {
-      console.log("Clicked", event.target.textContent);
-    }
+// document.body.addEventListener("click", event => {
+//     if (event.target.nodeName == "BUTTON") {
+//       console.log("Clicked", event.target.textContent);
+//     }
+//   });
+
+  // window.addEventListener("keydown", event => {
+  //   if (event.key == "v") {
+  //     document.body.style.background = "violet";
+  //   }
+  // });
+  // window.addEventListener("keyup", event => {
+  //   if (event.key == "v") {
+  //     document.body.style.background = "";
+  //   }
+  // });
+
+
+  window.addEventListener("keydown", e=>{
+if(e.key == "a"){
+  document.body.style.backgroundColor = "yellow";
+} 
   });
 
+  window.addEventListener("keyup", e=>{
+    if(e.key == "a"){
+      document.body.style.backgroundColor = "";
+    }
+  })
