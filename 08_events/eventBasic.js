@@ -50,14 +50,30 @@ const btn = document.querySelector("button");
   // });
 
 
-  window.addEventListener("keydown", e=>{
-if(e.key == "a"){
-  document.body.style.backgroundColor = "yellow";
-} 
-  });
+//   window.addEventListener("keydown", e=>{
+// if(e.key == "a"){
+//   document.body.style.backgroundColor = "yellow";
+// } 
+//   });
 
-  window.addEventListener("keyup", e=>{
-    if(e.key == "a"){
-      document.body.style.backgroundColor = "";
-    }
-  })
+//   window.addEventListener("keyup", e=>{
+//     if(e.key == "a"){
+//       document.body.style.backgroundColor = "";
+//     }
+//   })
+
+
+// document.body.addEventListener("click", (e)=>{
+//   e.target.nodeName == "button";
+//   console.log("Click", e.target.textContent);
+// })
+
+
+//Mouse clicks
+// window.addEventListener("click", event => {
+//   let dot = document.createElement("div");
+//   dot.className = "dot";
+//   dot.style.left = (event.pageX - 4) + "px";
+//   dot.style.top = (event.pageY - 4) + "px";
+//   document.body.appendChild(dot);
+// });
