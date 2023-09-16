@@ -5,12 +5,14 @@ const user = {
     logIn : 5,
     userMoreDetails : function (){
         console.log("user Details Successfully fetched")
+        console.log(this.user);
     }
 }
 
 console.log(user.username);
+console.log(user.userMoreDetails  )
 
-console.log(this)
+// console.log(this)
 
 
 //Cunstructor Function
