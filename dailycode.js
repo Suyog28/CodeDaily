@@ -211,10 +211,21 @@ while (i <= 3) {
 
 
 
-const list = [1, 2, 3, 4, 5];
+const list = [61, 52, 3, 34, 35];
 
 const newElement = [3, 45, 343, 3433];
 
-const newArray = list.concat(newElement);
+const newArray = list.concat(newElement);//It will give new array with both list and new element.
 
 console.log(newArray);
+
+
+const spreadOperator = [...list, ...newElement];
+
+console.log(spreadOperator);
+
+console.log(list.slice(2, 4));
+
+const age = list.every(age => (age < 18) ? false : true)
+
+console.log(age);
