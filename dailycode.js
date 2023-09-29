@@ -229,3 +229,19 @@ console.log(list.slice(2, 4));
 const age = list.every(age => (age < 18) ? false : true)
 
 console.log(age);
+
+const result = [];
+for (let i = 0; i < list.length; i++) {
+
+  result.push(list[i] * 2);
+
+}
+
+console.log(result);
+
+const res=result.map((item) => item * 2);
+console.log(res);
+
+const res1 = res.reduce((a, b) => a + b);
+
+console.log(res1);
