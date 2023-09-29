@@ -239,9 +239,16 @@ for (let i = 0; i < list.length; i++) {
 
 console.log(result);
 
-const res=result.map((item) => item * 2);
+const res = result.map((item) => item * 2);
 console.log(res);
 
 const res1 = res.reduce((a, b) => a + b);
-
+const res2 = res.reduce((a, b) => (a > b) ? a : b);
 console.log(res1);
+console.log(res2);
+
+const numbers = [2, 3, 4, 56, 767]
+
+const practical = numbers.filter(num => num % 2 == 0).map((num) => num * 2).reduce((a, b) => a + b);
+
+console.log(practical);
