@@ -208,3 +208,13 @@ while (i <= 3) {
 // console.log(filter);
 
 // const mapping = list.map()
+
+
+
+const list = [1, 2, 3, 4, 5];
+
+const newElement = [3, 45, 343, 3433];
+
+const newArray = list.concat(newElement);
+
+console.log(newArray);
