@@ -252,3 +252,11 @@ const numbers = [2, 3, 4, 56, 767]
 const practical = numbers.filter(num => num % 2 == 0).map((num) => num * 2).reduce((a, b) => a + b);
 
 console.log(practical);
+
+const sentense = ["You", "are", "a", "good", "boy"];
+
+const newStatement = sentense.filter((str) => str.length < 4)
+  .map((str) => str.toLocaleUpperCase())
+  .reduce((str, ele) => str + " " + ele)
+
+console.log(newStatement);
