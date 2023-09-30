@@ -211,52 +211,60 @@ while (i <= 3) {
 
 
 
-const list = [61, 52, 3, 34, 35];
+// const list = [61, 52, 3, 34, 35];
 
-const newElement = [3, 45, 343, 3433];
+// const newElement = [3, 45, 343, 3433];
 
-const newArray = list.concat(newElement);//It will give new array with both list and new element.
+// const newArray = list.concat(newElement);//It will give new array with both list and new element.
 
-console.log(newArray);
+// console.log(newArray);
 
 
-const spreadOperator = [...list, ...newElement];
+// const spreadOperator = [...list, ...newElement];
 
-console.log(spreadOperator);
+// console.log(spreadOperator);
 
-console.log(list.slice(2, 4));
+// console.log(list.slice(2, 4));
 
-const age = list.every(age => (age < 18) ? false : true)
+// const age = list.every(age => (age < 18) ? false : true)
 
-console.log(age);
+// console.log(age);
 
-const result = [];
-for (let i = 0; i < list.length; i++) {
+// const result = [];
+// for (let i = 0; i < list.length; i++) {
 
-  result.push(list[i] * 2);
+//   result.push(list[i] * 2);
 
-}
+// }
 
-console.log(result);
+// console.log(result);
 
-const res = result.map((item) => item * 2);
-console.log(res);
+// const res = result.map((item) => item * 2);
+// console.log(res);
 
-const res1 = res.reduce((a, b) => a + b);
-const res2 = res.reduce((a, b) => (a > b) ? a : b);
-console.log(res1);
-console.log(res2);
+// const res1 = res.reduce((a, b) => a + b);
+// const res2 = res.reduce((a, b) => (a > b) ? a : b);
+// console.log(res1);
+// console.log(res2);
 
-const numbers = [2, 3, 4, 56, 767]
+// const numbers = [2, 3, 4, 56, 767]
 
-const practical = numbers.filter(num => num % 2 == 0).map((num) => num * 2).reduce((a, b) => a + b);
+// const practical = numbers.filter(num => num % 2 == 0).map((num) => num * 2).reduce((a, b) => a + b);
 
-console.log(practical);
+// console.log(practical);
 
-const sentense = ["You", "are", "a", "good", "boy"];
+// const sentense = ["You", "are", "a", "good", "boy"];
 
-const newStatement = sentense.filter((str) => str.length < 4)
-  .map((str) => str.toLocaleUpperCase())
-  .reduce((str, ele) => str + " " + ele)
+// const newStatement = sentense.filter((str) => str.length < 4)
+//   .map((str) => str.toLocaleUpperCase())
+//   .reduce((str, ele) => str + " " + ele)
 
-console.log(newStatement);
+// console.log(newStatement);
+
+
+const singleDimention = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+const multiDimention = [[1, 2, 3],
+                        [4, 5, 6],
+                        [7, 8, 9]];
+
+console.log(multiDimention[2][2]);
