@@ -262,9 +262,34 @@ while (i <= 3) {
 // console.log(newStatement);
 
 
-const singleDimention = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-const multiDimention = [[1, 2, 3],
-                        [4, 5, 6],
-                        [7, 8, 9]];
+// const singleDimention = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+// const multiDimention = [[1, 2, 3],
+// [4, 5, 6],
+// [7, 8, 9]];
 
-console.log(multiDimention[2][2]);
+// console.log(multiDimention[2][2]);
+
+
+//Recurusion In javascrpt 
+
+function factorialwithForLoop(num) {
+  let result = 1
+  for (let i = 1; i <= num; i++) {
+    result = result * i;
+
+  }
+  return result;
+}
+
+const factorail = factorialwithForLoop(5)
+console.log(factorail);
+
+
+function factorialwithRecursion(num) {
+  if (num === 1) {
+    return 1;
+  }
+  return num * factorialwithRecursion(num - 1);
+}
+
+console.log(factorialwithRecursion(5)); 
