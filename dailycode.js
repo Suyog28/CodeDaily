@@ -1,3 +1,5 @@
+import fetch from "node-fetch";
+
 /* const animals = ["Dog", "Cat", "Horse", "Loin", "Tiger"];
 const names = ["Salman", "Shahruk", "Karan"];
 
@@ -348,3 +350,25 @@ const result2 = fibonachi(100);
 for (let i of result2) {
   console.log(i);
 }
+
+
+//Asyncrosnus Program
+
+
+
+function realAPICall(callbackMethod) {
+  const apiUrl = "https://api.chucknorris.io/jokes/random";
+  fetch(apiUrl)
+    .then(response => response.json())
+    .then(data => {
+      console.log(data);
+      callbackMethod(data)
+    }
+    )
+}
+
+function apiResponse(data) {
+  console.log(data.value);
+}
+
+realAPICall(apiResponse);

@@ -1,0 +1,23 @@
+{
+  "name": "codedaily",
+  "version": "1.0.0",
+  "description": "2. Importance of Promises: a) Promises can help us to write trust worthy code. b) Promises are used to solve the problems of callbacks like inversion of control and callback hell. c) They give us the result prompt in three states: 1) Pending 2) Fulfilled 3) Rejected d) We can attach function to promise object and retrieve its value unlike callbacks no need to pass the function. e) Nesting can be done in Promises and with the help of that we can return the values in each individual chain.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Suyog28/CodeDaily.git"
+  },
+  "type": "module",
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Suyog28/CodeDaily/issues"
+  },
+  "homepage": "https://github.com/Suyog28/CodeDaily#readme",
+  "dependencies": {
+    "node-fetch": "^3.3.2"
+  }
+}
