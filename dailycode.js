@@ -368,6 +368,8 @@ function realAPICall(callbackMethod) {
 }
 
 function apiResponse(data) {
+  const newElement = document.createElement("p");
+  newElement.textContent = data.value;
   console.log(data.value);
 }
 

@@ -114,8 +114,8 @@
           Lorem ipsum <del>dolor</del> sit amet consectetur, adipisicing elit.
           Magnam, consequatur <mark>soluta</mark> adipisci quia aperiam eum
           quibusdam illo atque perferendis quos.
-        </p> 
-        
+        </p>
+
         <div class="container">
           <form action="signup.html" method="post" id="signup">
             <h1>Sign Up</h1>
@@ -312,8 +312,27 @@
           let fullname = name.value;
           let emailaddress = email.value;
           console.log(fullname, emailaddress);
+
+          function realAPICall(callbackMethod) {
+            const apiUrl = "https://api.chucknorris.io/jokes/random";
+            fetch(apiUrl)
+              .then((response) => response.json())
+              .then((data) => {
+                console.log(data);
+                callbackMethod(data);
+              });
+          }
+
+          function apiResponse(data) {
+            const newElement = document.createElement("p");
+            newElement.textContent = data.value;
+            document.body.appendChild(newElement);
+            console.log(data.value);
+          }
+
+          realAPICall(apiResponse);
         </script>
-        <!-- <script src="app.js"></script> -->
+        <!-- <script type="module" ="./dailycode.js"></script> -->
       </body>
     </html>
   </body>
