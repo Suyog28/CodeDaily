@@ -299,78 +299,108 @@ while (i <= 3) {
 
 //Generator Function
 
-function* generatorFunction() {
-  yield 1;
-  yield 2;
-  yield 3;
-  return;
-}
+// function* generatorFunction() {
+//   yield 1;
+//   yield 2;
+//   yield 3;
+//   return;
+// }
 
-const result = generatorFunction();
+// const result = generatorFunction();
 
-console.log(result);
-console.log(result.next());
-console.log(result.next());
-console.log(result.next());
-console.log(result.next());
+// console.log(result);
+// console.log(result.next());
+// console.log(result.next());
+// console.log(result.next());
+// console.log(result.next());
 
-//Generator Function with counter range
+// //Generator Function with counter range
 
-function* counterRange(start, end) {
-  for (let i = start; i <= end; i++) {
-    yield i;
+// function* counterRange(start, end) {
+//   for (let i = start; i <= end; i++) {
+//     yield i;
+//   }
+// }
+
+// const result1 = counterRange(1, 101);
+
+// for (let i of result1) {
+//   console.log(i);
+// }
+
+
+// //Gerator function with fibonachi searies
+
+// function* fibonachi(maxNumer) {
+//   let a = 0;
+//   let b = 1;
+
+//   while (a < maxNumer) {
+//     yield a;
+//     let c = a + b;
+//     a = b;
+//     b = c;
+
+//   }
+
+// }
+
+// const result2 = fibonachi(100);
+
+// for (let i of result2) {
+//   console.log(i);
+// }
+
+
+// //Asyncrosnus Program
+
+
+
+// function realAPICall(callbackMethod) {
+//   const apiUrl = "https://api.chucknorris.io/jokes/random";
+//   fetch(apiUrl)
+//     .then(response => response.json())
+//     .then(data => {
+//       console.log(data);
+//       callbackMethod(data)
+//     }
+//     )
+// }
+
+// function apiResponse(data) {
+//   // const newElement = document.createElement("p");
+//   // newElement.textContent = data.value;
+//   console.log(data.value);
+// }
+
+// realAPICall(apiResponse);
+
+// setInterval(() => {
+//   const data = new Date();
+//   const hour = data.getHours('en-US', { hour: 'numeric', hour12: true });
+
+
+//   console.log(data.toLocaleTimeString() + " " + hour);
+// }, 2000)
+
+
+const collegs = ["Suyg", "Muley", "Ciatu"]
+
+const person = {
+  name: "Suyog",
+  address: {
+    city: "Amaravati",
+    state: "MH"
+
   }
 }
 
-const result1 = counterRange(1, 101);
+// const newCollegeList = Array.assign([], collegs);
+const personObject = Object.assign({}, person);
+const newCollegeList = [...collegs];
+console.log(person.address.city = "Nagpur");
+console.log(personObject.address.city = "Mumbai");
+console.log(personObject);
+console.log(person);
 
-for (let i of result1) {
-  console.log(i);
-}
-
-
-//Gerator function with fibonachi searies
-
-function* fibonachi(maxNumer) {
-  let a = 0;
-  let b = 1;
-
-  while (a < maxNumer) {
-    yield a;
-    let c = a + b;
-    a = b;
-    b = c;
-
-  }
-
-}
-
-const result2 = fibonachi(100);
-
-for (let i of result2) {
-  console.log(i);
-}
-
-
-//Asyncrosnus Program
-
-
-
-function realAPICall(callbackMethod) {
-  const apiUrl = "https://api.chucknorris.io/jokes/random";
-  fetch(apiUrl)
-    .then(response => response.json())
-    .then(data => {
-      console.log(data);
-      callbackMethod(data)
-    }
-    )
-}
-
-function apiResponse(data) {
-  const newElement = document.createElement("p");
-  newElement.textContent = data.value;
-  console.log(data.value);
-}
-
-realAPICall(apiResponse);
+console.log(newCollegeList);
