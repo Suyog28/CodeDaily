@@ -272,24 +272,79 @@ while (i <= 3) {
 
 //Recurusion In javascrpt 
 
-function factorialwithForLoop(num) {
-  let result = 1
-  for (let i = 1; i <= num; i++) {
-    result = result * i;
+// function factorialwithForLoop(num) {
+//   let result = 1
+//   for (let i = 1; i <= num; i++) {
+//     result = result * i;
 
-  }
-  return result;
+//   }
+//   return result;
+// }
+
+// const factorail = factorialwithForLoop(5)
+// console.log(factorail);
+
+
+// function factorialwithRecursion(num) {
+//   if (num === 1) {
+//     return 1;
+//   }
+//   return num * factorialwithRecursion(num - 1);
+// }
+
+// console.log(factorialwithRecursion(5)); 
+
+
+//Generator Function
+
+function* generatorFunction() {
+  yield 1;
+  yield 2;
+  yield 3;
+  return;
 }
 
-const factorail = factorialwithForLoop(5)
-console.log(factorail);
+const result = generatorFunction();
 
+console.log(result);
+console.log(result.next());
+console.log(result.next());
+console.log(result.next());
+console.log(result.next());
 
-function factorialwithRecursion(num) {
-  if (num === 1) {
-    return 1;
+//Generator Function with counter range
+
+function* counterRange(start, end) {
+  for (let i = start; i <= end; i++) {
+    yield i;
   }
-  return num * factorialwithRecursion(num - 1);
 }
 
-console.log(factorialwithRecursion(5)); 
+const result1 = counterRange(1, 101);
+
+for (let i of result1) {
+  console.log(i);
+}
+
+
+//Gerator function with fibonachi searies
+
+function* fibonachi(maxNumer) {
+  let a = 0;
+  let b = 1;
+
+  while (a < maxNumer) {
+    yield a;
+    let c = a + b;
+    a = b;
+    b = c;
+
+  }
+
+}
+
+const result2 = fibonachi(100);
+
+for (let i of result2) {
+  console.log(i);
+}
