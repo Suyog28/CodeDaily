@@ -10,6 +10,22 @@ let list = [
     { text: 'bread', cost: 3, need: true }
 ];
 
+
+// const listElement = document.getElementById("list");
+
+// for (let item of list) {
+//     listElement.innerHTML += `<li>${item.text}</li>`;
+
+// }
+
+// console.log(person.at(0))
+
+//Entries
+
+for (let [index, element] of list.entries()) {
+    console.log(index, element);
+}
+
 // console.log(typeof person);
 //Iterating
 
@@ -69,6 +85,10 @@ console.log(person.slice(0, 3));
 
 //Map Method
 
+person.map((e) => {
+    console.log(e);
+})
+
 
 
 
@@ -79,4 +99,19 @@ console.log(person.slice(0, 3));
 
 
 
+//First Class Function
 
+const greet = function (salution) {
+    return function (firstname) {
+        return `${salution} ${firstname}`
+    }
+}
+
+const sayHello = greet("Hello");
+console.log(sayHello("Suyog"));
+
+const sayGoodbye = greet("Goodbye");
+console.log(sayGoodbye("Suyog"));
+
+
+//Declarative function
