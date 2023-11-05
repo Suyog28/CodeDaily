@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DOM Manulation</title>
-</head>
-<style>
-    .background{
-        background-color: black;
-        color: aliceblue;
+  </head>
+  <style>
+    .background {
+      background-color: black;
+      color: aliceblue;
     }
-</style>
-<body class="background">
+  </style>
+  <body class="background">
     <!-- <div id="parent" class="names">
     <h1 id="newTitle" class="heading">Suyog Muley learining again DOM</h1>
         <ul>
@@ -22,100 +22,131 @@
         </ul> -->
     <!-- </div> -->
 
-<div class="parent" id = "Header">
-        <div class="day">Monday</div>
-        <div class="day">Tuesday</div>
-        <div class="day">Wednesday</div>
-        <div class="day">Thusday</div>
+    <div class="parent" id="Header">
+      <div class="day">Monday</div>
+      <div class="day">Tuesday</div>
+      <div class="day">Wednesday</div>
+      <div class="day">Thusday</div>
+    </div>
 
-</div>
+    <ul class="langName">
+      <li>Javascript</li>
+    </ul>
 
-<ul class= "langName">
-    <li>Javascript</li>
-</ul>
-    
+    <div id="the-one">ID</div>
+    <div class="an-awesome-class">Class</div>
+    <p>A tag</p>
+
+    <!-- To do so, you add a space between your classes, ids or tags. Here’s an example: -->
+    <div class="container">
+      <div class="inner-item">Inner item!</div>
+      <div class="thing">A thing</div>
+      <div class="thing">A thing</div>
+      <div class="another-thing">Another thing</div>
+    </div>
+
     <script>
+      const allThings = document.querySelectorAll(
+        ".inner-item, .thing, .another-thing"
+      );
+      allThings.forEach((e) => {
+        e.style.backgroundColor = "red";
+      });
 
-         //Lecter 1 & 2 +++++++
-    //   const parent = document.querySelector(".parent");
-    //   console.log(parent);
-    //   console.log(parent.children);
-    // console.log(parent.children[0].innerHTML);
+      let newAllThings = Array.from(allThings);
+      newAllThings.forEach((e) => {
+        e.style.fontSize = "120px";
+      });
+      const ID = document.querySelector("#the-one");
+      console.log(ID);
 
-    // for (let index = 0; index < parent.children.length; index++) {
-    //     console.log(parent.children[index].innerHTML);
-    //     parent.children[index].style.color = "orange";
-    //     parent.children[index].style.fontSize = "40px";
-    // }
+      const ClassS = document.querySelector(".an-awesome-class");
+      console.log(ClassS);
 
-    // parent.children.style.color = "orange";
-  
+      const tag = document.querySelector("p");
+      console.log(tag);
 
-    // console.log(parent.firstElementChild);
-    // const day = document.querySelector(".day");
-    // console.log(day);
-    // const newLi = parent.innerHTML = "<h1>New Element</h1>"
-    // newLi.appendChild(day);
+      let innerItem = document.querySelector(".container .inner-item");
+      console.log(innerItem);
+      //Lecter 1 & 2 +++++++
+      //   const parent = document.querySelector(".parent");
+      //   console.log(parent);
+      //   console.log(parent.children);
+      // console.log(parent.children[0].innerHTML);
 
-    // console.log(parent.firstElementChild);
+      // for (let index = 0; index < parent.children.length; index++) {
+      //     console.log(parent.children[index].innerHTML);
+      //     parent.children[index].style.color = "orange";
+      //     parent.children[index].style.fontSize = "40px";
+      // }
 
-    // const dayOne = document.querySelector(".day");
-    // console.log(dayOne);
-    // console.log(dayOne.parentElement)
-    // console.log(dayOne.nextElementSibling)
-    // console.log(dayOne.childElementCount) 
-    
-    // console.log(parent.childNodes)
-    // console.log(dayOne.innerHTML)
+      // parent.children.style.color = "orange";
 
-    //Lecter 3 +++++++
-    // const divElement = document.createElement("div");
-    // console.log(divElement);
-    // divElement.id = "MyId"
-    // divElement.className = "newDiv"
-    // divElement.setAttribute("title","NewDivTitle")
-    // divElement.style.fontSize = "20px"
-    // divElement.style.backgroundColor = "pink"
-    // divElement.style.padding = "20px"
-    // // divElement.innerText = "This is new Div"
-    // const newElement = document.createTextNode("This is new Item");
-    // divElement.appendChild(newElement);
-    // document.body.appendChild(divElement);
+      // console.log(parent.firstElementChild);
+      // const day = document.querySelector(".day");
+      // console.log(day);
+      // const newLi = parent.innerHTML = "<h1>New Element</h1>"
+      // newLi.appendChild(day);
 
-    //Lecter 4 +++++++
+      // console.log(parent.firstElementChild);
 
-    function addnewItem(langName){
+      // const dayOne = document.querySelector(".day");
+      // console.log(dayOne);
+      // console.log(dayOne.parentElement)
+      // console.log(dayOne.nextElementSibling)
+      // console.log(dayOne.childElementCount)
+
+      // console.log(parent.childNodes)
+      // console.log(dayOne.innerHTML)
+
+      //Lecter 3 +++++++
+      // const divElement = document.createElement("div");
+      // console.log(divElement);
+      // divElement.id = "MyId"
+      // divElement.className = "newDiv"
+      // divElement.setAttribute("title","NewDivTitle")
+      // divElement.style.fontSize = "20px"
+      // divElement.style.backgroundColor = "pink"
+      // divElement.style.padding = "20px"
+      // // divElement.innerText = "This is new Div"
+      // const newElement = document.createTextNode("This is new Item");
+      // divElement.appendChild(newElement);
+      // document.body.appendChild(divElement);
+
+      //Lecter 4 +++++++
+
+      function addnewItem(langName) {
         const newItem = document.createElement("li");
         newItem.innerText = `${langName}`;
         document.querySelector(".langName").appendChild(newItem);
-    }
-    addnewItem("Python");
-    addnewItem("Java");
-    
-    function addItemOptimize(langName){
+      }
+      addnewItem("Python");
+      addnewItem("Java");
+
+      function addItemOptimize(langName) {
         const li = document.createElement("li");
         li.appendChild(document.createTextNode(langName));
         document.querySelector(".langName").appendChild(li);
-    }
+      }
 
-    addItemOptimize("Angular");
-    addItemOptimize("Mojo");
+      addItemOptimize("Angular");
+      addItemOptimize("Mojo");
 
-    //Edit 
-    const li = document.querySelector("li:nth-child(2)");
-    li.outerHTML = "<li>NodeJs</li>"
+      //Edit
+      const li = document.querySelector("li:nth-child(2)");
+      li.outerHTML = "<li>NodeJs</li>";
 
-    //Edit 2
+      //Edit 2
 
-    const li2 = document.querySelector("li:first-Child");
-    console.log(li2);
-    const liItem = document.createElement("li");
-    liItem.textContent = "PHP"
-    li2.replaceWith(liItem);
+      const li2 = document.querySelector("li:first-Child");
+      console.log(li2);
+      const liItem = document.createElement("li");
+      liItem.textContent = "PHP";
+      li2.replaceWith(liItem);
 
-    //Delete
-    const lastElement = document.querySelector("li:last-Child");
-    lastElement.remove();
+      //Delete
+      const lastElement = document.querySelector("li:last-Child");
+      lastElement.remove();
     </script>
-</body>
+  </body>
 </html>
